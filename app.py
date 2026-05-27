@@ -315,8 +315,13 @@ elif pagina == "🔄 Markov — Riesgo financiero":
         """)
         st.subheader("Validación")
         cov_ok = covid_p_crisis > 0.60
-        st.success(f"✓ COVID-19 detectado: P(crisis) = {covid_p_crisis*100:.1f}% (mar-sep 2020)") if cov_ok else st.warning("⚠ Revisar detección COVID")
+        covid_p_crisis = mkp.get("covid_p_crisis", 0)
+        cov_ok = covid_p_crisis > 0.60
 
+        if cov_ok:
+            st.success(f"✓ COVID-19 detectado: P(crisis) = {covid_p_crisis*100:.1f}% (mar-sep 2020)")
+        else:
+            st.warning("⚠ Revisar detección COVID")
     with col2:
         st.subheader("TRM y tasa de política")
         fig_trm = go.Figure()
