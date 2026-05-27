@@ -1,0 +1,1621 @@
+fecha,macrosector_id,ocupados_miles,var_empleo_anual,macrosector
+2015-01,M01,3096.485,,Agropecuario
+2015-02,M01,3579.283,,Agropecuario
+2015-03,M01,3325.637,,Agropecuario
+2015-04,M01,3068.515,,Agropecuario
+2015-05,M01,3021.803,,Agropecuario
+2015-06,M01,3554.813,,Agropecuario
+2015-07,M01,3253.274,,Agropecuario
+2015-08,M01,3437.295,,Agropecuario
+2015-09,M01,3325.802,,Agropecuario
+2015-10,M01,3662.783,,Agropecuario
+2015-11,M01,3525.943,,Agropecuario
+2015-12,M01,3524.699,,Agropecuario
+2016-01,M01,2996.536,-3.2278,Agropecuario
+2016-02,M01,3513.706,-1.8321,Agropecuario
+2016-03,M01,3279.8,-1.3783,Agropecuario
+2016-04,M01,3245.84,5.7789,Agropecuario
+2016-05,M01,3032.94,0.3686,Agropecuario
+2016-06,M01,3658.698,2.9224,Agropecuario
+2016-07,M01,3351.815,3.029,Agropecuario
+2016-08,M01,3657.261,6.3994,Agropecuario
+2016-09,M01,3202.968,-3.6934,Agropecuario
+2016-10,M01,3576.084,-2.367,Agropecuario
+2016-11,M01,3463.583,-1.7686,Agropecuario
+2016-12,M01,3411.378,-3.2151,Agropecuario
+2017-01,M01,3173.963,5.9211,Agropecuario
+2017-02,M01,3520.24,0.186,Agropecuario
+2017-03,M01,3568.706,8.8086,Agropecuario
+2017-04,M01,3329.975,2.5921,Agropecuario
+2017-05,M01,3374.501,11.2617,Agropecuario
+2017-06,M01,3736.967,2.1393,Agropecuario
+2017-07,M01,3619.241,7.9785,Agropecuario
+2017-08,M01,3740.485,2.2756,Agropecuario
+2017-09,M01,3521.034,9.9304,Agropecuario
+2017-10,M01,3682.852,2.9856,Agropecuario
+2017-11,M01,3750.652,8.2882,Agropecuario
+2017-12,M01,3543.035,3.8593,Agropecuario
+2018-01,M01,3426.818,7.9665,Agropecuario
+2018-02,M01,3646.026,3.5732,Agropecuario
+2018-03,M01,3651.371,2.3164,Agropecuario
+2018-04,M01,3333.661,0.1107,Agropecuario
+2018-05,M01,3267.835,-3.1609,Agropecuario
+2018-06,M01,3725.397,-0.3096,Agropecuario
+2018-07,M01,3384.806,-6.4775,Agropecuario
+2018-08,M01,3864.829,3.3243,Agropecuario
+2018-09,M01,3458.605,-1.773,Agropecuario
+2018-10,M01,3724.499,1.1308,Agropecuario
+2018-11,M01,3682.216,-1.8246,Agropecuario
+2018-12,M01,3695.518,4.3037,Agropecuario
+2019-01,M01,3302.636,-3.6238,Agropecuario
+2019-02,M01,3588.349,-1.5819,Agropecuario
+2019-03,M01,3202.772,-12.2858,Agropecuario
+2019-04,M01,2941.998,-11.7487,Agropecuario
+2019-05,M01,3119.05,-4.553,Agropecuario
+2019-06,M01,3794.454,1.8537,Agropecuario
+2019-07,M01,3276.187,-3.209,Agropecuario
+2019-08,M01,3564.911,-7.7602,Agropecuario
+2019-09,M01,3258.866,-5.7751,Agropecuario
+2019-10,M01,3711.118,-0.3593,Agropecuario
+2019-11,M01,3434.726,-6.7212,Agropecuario
+2019-12,M01,3589.469,-2.8697,Agropecuario
+2020-01,M01,3109.415,-5.8505,Agropecuario
+2020-02,M01,3295.708,-8.1553,Agropecuario
+2020-03,M01,3116.286,-2.7003,Agropecuario
+2020-04,M01,2729.4267623279047,-7.2254,Agropecuario
+2020-05,M01,2729.4267623279047,-12.4917,Agropecuario
+2020-06,M01,3230.486,-14.863,Agropecuario
+2020-07,M01,3104.007,-5.2555,Agropecuario
+2020-08,M01,3597.625,0.9177,Agropecuario
+2020-09,M01,3238.091,-0.6375,Agropecuario
+2020-10,M01,3444.945,-7.1723,Agropecuario
+2020-11,M01,3288.503,-4.2572,Agropecuario
+2020-12,M01,3396.962,-5.3631,Agropecuario
+2021-01,M01,3057.416,-1.6723,Agropecuario
+2021-02,M01,2992.547,-9.1987,Agropecuario
+2021-03,M01,3233.068,3.7475,Agropecuario
+2021-04,M01,2908.205,6.55,Agropecuario
+2021-05,M01,3208.204,17.5413,Agropecuario
+2021-06,M01,3098.223,-4.0942,Agropecuario
+2021-07,M01,3317.856,6.8894,Agropecuario
+2021-08,M01,3163.239,-12.0742,Agropecuario
+2021-09,M01,2976.337,-8.0836,Agropecuario
+2021-10,M01,3268.895,-5.1104,Agropecuario
+2021-11,M01,3167.89,-3.6677,Agropecuario
+2021-12,M01,3160.651,-6.9565,Agropecuario
+2022-01,M01,2963.324,-3.0775,Agropecuario
+2022-02,M01,3127.545,4.5111,Agropecuario
+2022-03,M01,3328.091,2.9391,Agropecuario
+2022-04,M01,3080.509,5.9248,Agropecuario
+2022-05,M01,3549.779,10.6469,Agropecuario
+2022-06,M01,3264.137,5.3551,Agropecuario
+2022-07,M01,3288.231,-0.8929,Agropecuario
+2022-08,M01,3135.228,-0.8855,Agropecuario
+2022-09,M01,3249.797,9.1878,Agropecuario
+2022-10,M01,3399.21,3.9865,Agropecuario
+2022-11,M01,3234.767,2.1111,Agropecuario
+2022-12,M01,3069.013,-2.8993,Agropecuario
+2023-01,M01,2957.257,-0.2047,Agropecuario
+2023-02,M01,3262.291,4.3084,Agropecuario
+2023-03,M01,3511.557,5.5126,Agropecuario
+2023-04,M01,3264.656,5.9778,Agropecuario
+2023-05,M01,3456.384,-2.631,Agropecuario
+2023-06,M01,3255.977,-0.25,Agropecuario
+2023-07,M01,3348.769,1.8411,Agropecuario
+2023-08,M01,3313.346,5.6812,Agropecuario
+2023-09,M01,3151.631,-3.0207,Agropecuario
+2023-10,M01,3402.603,0.0998,Agropecuario
+2023-11,M01,3326.527,2.8367,Agropecuario
+2023-12,M01,3114.109,1.4694,Agropecuario
+2024-01,M01,3201.514,8.2596,Agropecuario
+2024-02,M01,3228.219,-1.0444,Agropecuario
+2024-03,M01,3304.475,-5.8972,Agropecuario
+2024-04,M01,3155.868,-3.3323,Agropecuario
+2024-05,M01,3435.331,-0.6091,Agropecuario
+2024-06,M01,3272.395,0.5042,Agropecuario
+2024-07,M01,3378.581,0.8902,Agropecuario
+2024-08,M01,3389.915,2.3109,Agropecuario
+2024-09,M01,3248.99,3.0892,Agropecuario
+2024-10,M01,3349.127,-1.5716,Agropecuario
+2024-11,M01,3286.019,-1.2177,Agropecuario
+2024-12,M01,3150.754,1.1767,Agropecuario
+2025-01,M01,3217.921,0.5125,Agropecuario
+2025-02,M01,3358.818,4.0455,Agropecuario
+2025-03,M01,3685.342,11.5258,Agropecuario
+2025-04,M01,3180.167,0.77,Agropecuario
+2025-05,M01,3501.129,1.9153,Agropecuario
+2025-06,M01,3320.82,1.4798,Agropecuario
+2025-07,M01,3442.06,1.8789,Agropecuario
+2025-08,M01,3153.047,-6.9874,Agropecuario
+2025-09,M01,3370.941,3.7535,Agropecuario
+2025-10,M01,3696.571,10.3742,Agropecuario
+2025-11,M01,3598.039,9.4954,Agropecuario
+2025-12,M01,3108.382,-1.3448,Agropecuario
+2026-01,M01,3218.804,0.0274,Agropecuario
+2026-02,M01,2996.084,-10.7995,Agropecuario
+2026-03,M01,3443.286,-6.5681,Agropecuario
+2015-01,M02,383.049,,Minería y energía
+2015-02,M02,371.575,,Minería y energía
+2015-03,M02,285.52,,Minería y energía
+2015-04,M02,337.834,,Minería y energía
+2015-05,M02,570.112,,Minería y energía
+2015-06,M02,260.312,,Minería y energía
+2015-07,M02,470.175,,Minería y energía
+2015-08,M02,309.054,,Minería y energía
+2015-09,M02,446.61,,Minería y energía
+2015-10,M02,274.601,,Minería y energía
+2015-11,M02,397.813,,Minería y energía
+2015-12,M02,347.359,,Minería y energía
+2016-01,M02,317.271,-17.1722,Minería y energía
+2016-02,M02,314.287,-15.4176,Minería y energía
+2016-03,M02,386.089,35.2231,Minería y energía
+2016-04,M02,302.811,-10.3669,Minería y energía
+2016-05,M02,547.757,-3.9212,Minería y energía
+2016-06,M02,244.522,-6.0658,Minería y energía
+2016-07,M02,404.161,-14.0403,Minería y energía
+2016-08,M02,263.946,-14.5955,Minería y energía
+2016-09,M02,448.517,0.427,Minería y energía
+2016-10,M02,315.948,15.0571,Minería y energía
+2016-11,M02,312.931,-21.3372,Minería y energía
+2016-12,M02,291.702,-16.0229,Minería y energía
+2017-01,M02,371.671,17.1462,Minería y energía
+2017-02,M02,309.152,-1.6339,Minería y energía
+2017-03,M02,334.691,-13.3125,Minería y energía
+2017-04,M02,360.988,19.2123,Minería y energía
+2017-05,M02,554.893,1.3028,Minería y energía
+2017-06,M02,268.42,9.7734,Minería y energía
+2017-07,M02,508.383,25.7872,Minería y energía
+2017-08,M02,298.863,13.2288,Minería y energía
+2017-09,M02,414.716,-7.5362,Minería y energía
+2017-10,M02,259.224,-17.9536,Minería y energía
+2017-11,M02,329.499,5.2945,Minería y energía
+2017-12,M02,317.095,8.7051,Minería y energía
+2018-01,M02,393.17,5.7844,Minería y energía
+2018-02,M02,332.806,7.6513,Minería y energía
+2018-03,M02,385.497,15.18,Minería y energía
+2018-04,M02,368.969,2.2109,Minería y energía
+2018-05,M02,653.668,17.8007,Minería y energía
+2018-06,M02,251.856,-6.1709,Minería y energía
+2018-07,M02,510.667,0.4493,Minería y energía
+2018-08,M02,306.316,2.4938,Minería y energía
+2018-09,M02,467.163,12.6465,Minería y energía
+2018-10,M02,308.512,19.0137,Minería y energía
+2018-11,M02,377.336,14.5181,Minería y energía
+2018-12,M02,302.884,-4.4816,Minería y energía
+2019-01,M02,363.41,-7.5692,Minería y energía
+2019-02,M02,302.578,-9.0828,Minería y energía
+2019-03,M02,376.883,-2.2345,Minería y energía
+2019-04,M02,370.613,0.4456,Minería y energía
+2019-05,M02,684.875,4.7741,Minería y energía
+2019-06,M02,275.687,9.4622,Minería y energía
+2019-07,M02,469.951,-7.9731,Minería y energía
+2019-08,M02,281.698,-8.0368,Minería y energía
+2019-09,M02,458.745,-1.8019,Minería y energía
+2019-10,M02,286.787,-7.0419,Minería y energía
+2019-11,M02,469.882,24.5262,Minería y energía
+2019-12,M02,322.24,6.3906,Minería y energía
+2020-01,M02,422.271,16.1969,Minería y energía
+2020-02,M02,474.801,56.9185,Minería y energía
+2020-03,M02,394.198,4.5943,Minería y energía
+2020-04,M02,400.501,8.0645,Minería y energía
+2020-05,M02,623.108,-9.0187,Minería y energía
+2020-06,M02,341.255,23.7835,Minería y energía
+2020-07,M02,508.989,8.3068,Minería y energía
+2020-08,M02,293.958,4.3522,Minería y energía
+2020-09,M02,458.486,-0.0565,Minería y energía
+2020-10,M02,355.621,24.0018,Minería y energía
+2020-11,M02,385.153,-18.032,Minería y energía
+2020-12,M02,394.484,22.4193,Minería y energía
+2021-01,M02,402.897,-4.588,Minería y energía
+2021-02,M02,441.913,-6.9267,Minería y energía
+2021-03,M02,447.889,13.6203,Minería y energía
+2021-04,M02,552.566,37.9687,Minería y energía
+2021-05,M02,460.105,-26.1597,Minería y energía
+2021-06,M02,585.175,71.4773,Minería y energía
+2021-07,M02,434.116,-14.7101,Minería y energía
+2021-08,M02,548.018,86.4273,Minería y energía
+2021-09,M02,638.729,39.3127,Minería y energía
+2021-10,M02,650.041,82.7904,Minería y energía
+2021-11,M02,471.38,22.3877,Minería y energía
+2021-12,M02,523.813,32.7843,Minería y energía
+2022-01,M02,639.481,58.7207,Minería y energía
+2022-02,M02,474.851,7.4535,Minería y energía
+2022-03,M02,569.495,27.1509,Minería y energía
+2022-04,M02,585.929,6.0378,Minería y energía
+2022-05,M02,525.086,14.1231,Minería y energía
+2022-06,M02,656.986,12.2717,Minería y energía
+2022-07,M02,507.153,16.8243,Minería y energía
+2022-08,M02,587.782,7.256,Minería y energía
+2022-09,M02,608.263,-4.7698,Minería y energía
+2022-10,M02,676.225,4.0281,Minería y energía
+2022-11,M02,562.091,19.2437,Minería y energía
+2022-12,M02,660.49,26.0927,Minería y energía
+2023-01,M02,628.236,-1.7585,Minería y energía
+2023-02,M02,507.802,6.9392,Minería y energía
+2023-03,M02,448.467,-21.2518,Minería y energía
+2023-04,M02,589.607,0.6277,Minería y energía
+2023-05,M02,495.449,-5.6442,Minería y energía
+2023-06,M02,674.622,2.6844,Minería y energía
+2023-07,M02,546.471,7.7527,Minería y energía
+2023-08,M02,512.285,-12.8444,Minería y energía
+2023-09,M02,636.781,4.6884,Minería y energía
+2023-10,M02,745.543,10.2507,Minería y energía
+2023-11,M02,568.613,1.1603,Minería y energía
+2023-12,M02,714.543,8.1838,Minería y energía
+2024-01,M02,571.035,-9.105,Minería y energía
+2024-02,M02,514.859,1.3897,Minería y energía
+2024-03,M02,580.277,29.3912,Minería y energía
+2024-04,M02,607.884,3.0999,Minería y energía
+2024-05,M02,508.279,2.5896,Minería y energía
+2024-06,M02,644.826,-4.4167,Minería y energía
+2024-07,M02,490.574,-10.2287,Minería y energía
+2024-08,M02,558.232,8.969,Minería y energía
+2024-09,M02,725.509,13.9338,Minería y energía
+2024-10,M02,771.238,3.4465,Minería y energía
+2024-11,M02,608.986,7.1003,Minería y energía
+2024-12,M02,645.053,-9.7251,Minería y energía
+2025-01,M02,655.352,14.7656,Minería y energía
+2025-02,M02,541.468,5.1682,Minería y energía
+2025-03,M02,582.637,0.4067,Minería y energía
+2025-04,M02,584.737,-3.8078,Minería y energía
+2025-05,M02,511.593,0.652,Minería y energía
+2025-06,M02,782.012,21.2749,Minería y energía
+2025-07,M02,542.918,10.6699,Minería y energía
+2025-08,M02,572.544,2.5638,Minería y energía
+2025-09,M02,646.35,-10.9108,Minería y energía
+2025-10,M02,729.674,-5.3893,Minería y energía
+2025-11,M02,642.551,5.5116,Minería y energía
+2025-12,M02,608.993,-5.5902,Minería y energía
+2026-01,M02,585.927,-10.5935,Minería y energía
+2026-02,M02,690.916,27.6005,Minería y energía
+2026-03,M02,708.064,21.5275,Minería y energía
+2015-01,M03,2355.54,,Manufactura
+2015-02,M03,2573.883,,Manufactura
+2015-03,M03,2378.386,,Manufactura
+2015-04,M03,2945.402331103554,,Manufactura
+2015-05,M03,2363.739,,Manufactura
+2015-06,M03,2287.843,,Manufactura
+2015-07,M03,2402.73,,Manufactura
+2015-08,M03,2418.577,,Manufactura
+2015-09,M03,2275.774,,Manufactura
+2015-10,M03,2651.864,,Manufactura
+2015-11,M03,2764.535,,Manufactura
+2015-12,M03,2483.164,,Manufactura
+2016-01,M03,2203.13,-6.4703,Manufactura
+2016-02,M03,2426.545,-5.7243,Manufactura
+2016-03,M03,2162.401,-9.0812,Manufactura
+2016-04,M03,2732.838,-7.2168,Manufactura
+2016-05,M03,2321.888,-1.7705,Manufactura
+2016-06,M03,2335.123,2.0666,Manufactura
+2016-07,M03,2325.321,-3.2217,Manufactura
+2016-08,M03,2403.446,-0.6256,Manufactura
+2016-09,M03,2328.993,2.3385,Manufactura
+2016-10,M03,2547.275,-3.944,Manufactura
+2016-11,M03,2616.948,-5.3386,Manufactura
+2016-12,M03,2452.637,-1.2294,Manufactura
+2017-01,M03,2171.549,-1.4335,Manufactura
+2017-02,M03,2323.584,-4.2431,Manufactura
+2017-03,M03,2371.562,9.6726,Manufactura
+2017-04,M03,2895.231,5.9423,Manufactura
+2017-05,M03,2347.118,1.0866,Manufactura
+2017-06,M03,2389.131,2.3129,Manufactura
+2017-07,M03,2223.022,-4.3993,Manufactura
+2017-08,M03,2286.536,-4.8643,Manufactura
+2017-09,M03,2276.614,-2.249,Manufactura
+2017-10,M03,2542.716,-0.179,Manufactura
+2017-11,M03,2563.714,-2.0342,Manufactura
+2017-12,M03,2489.185,1.4902,Manufactura
+2018-01,M03,2172.385,0.0385,Manufactura
+2018-02,M03,2422.314,4.249,Manufactura
+2018-03,M03,2219.538,-6.4103,Manufactura
+2018-04,M03,2764.331,-4.5212,Manufactura
+2018-05,M03,2350.611,0.1488,Manufactura
+2018-06,M03,2328.726,-2.5283,Manufactura
+2018-07,M03,2353.705,5.8786,Manufactura
+2018-08,M03,2521.706,10.285,Manufactura
+2018-09,M03,2278.051,0.0631,Manufactura
+2018-10,M03,2624.848,3.2301,Manufactura
+2018-11,M03,2658.797,3.7088,Manufactura
+2018-12,M03,2516.126,1.0823,Manufactura
+2019-01,M03,2156.376,-0.7369,Manufactura
+2019-02,M03,2317.642,-4.3212,Manufactura
+2019-03,M03,2400.993,8.1754,Manufactura
+2019-04,M03,2715.413,-1.7696,Manufactura
+2019-05,M03,2312.071,-1.6396,Manufactura
+2019-06,M03,2290.724,-1.6319,Manufactura
+2019-07,M03,2362.181,0.3601,Manufactura
+2019-08,M03,2219.538,-11.9827,Manufactura
+2019-09,M03,2192.68,-3.7475,Manufactura
+2019-10,M03,2538.956,-3.2723,Manufactura
+2019-11,M03,2534.813,-4.6632,Manufactura
+2019-12,M03,2353.027,-6.4821,Manufactura
+2020-01,M03,2297.592,6.5488,Manufactura
+2020-02,M03,2308.862,-0.3788,Manufactura
+2020-03,M03,1985.173,-17.3187,Manufactura
+2020-04,M03,1934.5530202477962,-28.7566,Manufactura
+2020-05,M03,1934.5530202477962,-16.3281,Manufactura
+2020-06,M03,1934.5530202477962,-15.5484,Manufactura
+2020-07,M03,1934.5530202477962,-18.1031,Manufactura
+2020-08,M03,2106.75,-5.0816,Manufactura
+2020-09,M03,2080.559,-5.1134,Manufactura
+2020-10,M03,2424.621,-4.5032,Manufactura
+2020-11,M03,2323.275,-8.3453,Manufactura
+2020-12,M03,2366.19,0.5594,Manufactura
+2021-01,M03,1934.5530202477962,-15.8008,Manufactura
+2021-02,M03,2120.273,-8.168,Manufactura
+2021-03,M03,1939.94,-2.2785,Manufactura
+2021-04,M03,2080.761,7.5577,Manufactura
+2021-05,M03,2096.338,8.3629,Manufactura
+2021-06,M03,1989.604,2.8457,Manufactura
+2021-07,M03,2179.342,12.6535,Manufactura
+2021-08,M03,2058.475,-2.2914,Manufactura
+2021-09,M03,2198.917,5.6888,Manufactura
+2021-10,M03,2206.635,-8.9905,Manufactura
+2021-11,M03,1975.114,-14.9858,Manufactura
+2021-12,M03,2261.983,-4.404,Manufactura
+2022-01,M03,2068.858,6.9424,Manufactura
+2022-02,M03,2334.25,10.092,Manufactura
+2022-03,M03,2406.055,24.0273,Manufactura
+2022-04,M03,2382.154,14.4847,Manufactura
+2022-05,M03,2198.142,4.8563,Manufactura
+2022-06,M03,2258.12,13.496,Manufactura
+2022-07,M03,2457.971,12.785,Manufactura
+2022-08,M03,2239.012,8.7704,Manufactura
+2022-09,M03,2426.812,10.364,Manufactura
+2022-10,M03,2443.253,10.723,Manufactura
+2022-11,M03,2397.152,21.3678,Manufactura
+2022-12,M03,2510.838,11.0016,Manufactura
+2023-01,M03,2270.051,9.7248,Manufactura
+2023-02,M03,2336.407,0.0924,Manufactura
+2023-03,M03,2431.562,1.0601,Manufactura
+2023-04,M03,2544.638,6.8209,Manufactura
+2023-05,M03,2411.419,9.7026,Manufactura
+2023-06,M03,2316.334,2.578,Manufactura
+2023-07,M03,2494.337,1.4795,Manufactura
+2023-08,M03,2444.651,9.1844,Manufactura
+2023-09,M03,2467.345,1.6702,Manufactura
+2023-10,M03,2335.526,-4.4092,Manufactura
+2023-11,M03,2385.635,-0.4804,Manufactura
+2023-12,M03,2376.192,-5.3626,Manufactura
+2024-01,M03,2385.206,5.0728,Manufactura
+2024-02,M03,2485.328,6.3739,Manufactura
+2024-03,M03,2405.477,-1.0728,Manufactura
+2024-04,M03,2452.013,-3.64,Manufactura
+2024-05,M03,2500.915,3.7113,Manufactura
+2024-06,M03,2469.095,6.5949,Manufactura
+2024-07,M03,2560.968,2.6713,Manufactura
+2024-08,M03,2401.399,-1.7693,Manufactura
+2024-09,M03,2429.093,-1.5503,Manufactura
+2024-10,M03,2610.742,11.7839,Manufactura
+2024-11,M03,2532.263,6.1463,Manufactura
+2024-12,M03,2374.142,-0.0863,Manufactura
+2025-01,M03,2417.425,1.3508,Manufactura
+2025-02,M03,2578.84,3.7626,Manufactura
+2025-03,M03,2622.991,9.0424,Manufactura
+2025-04,M03,2564.499,4.5875,Manufactura
+2025-05,M03,2379.203,-4.8667,Manufactura
+2025-06,M03,2785.378,12.8097,Manufactura
+2025-07,M03,2634.129,2.8568,Manufactura
+2025-08,M03,2600.199,8.2785,Manufactura
+2025-09,M03,2673.56,10.0641,Manufactura
+2025-10,M03,2740.794,4.9814,Manufactura
+2025-11,M03,2430.341,-4.0249,Manufactura
+2025-12,M03,2884.53,21.4978,Manufactura
+2026-01,M03,2551.649,5.5524,Manufactura
+2026-02,M03,2715.793,5.3106,Manufactura
+2026-03,M03,2456.729,-6.3386,Manufactura
+2015-01,M04,383.049,,Electricidad y agua
+2015-02,M04,371.575,,Electricidad y agua
+2015-03,M04,285.52,,Electricidad y agua
+2015-04,M04,337.834,,Electricidad y agua
+2015-05,M04,570.112,,Electricidad y agua
+2015-06,M04,260.312,,Electricidad y agua
+2015-07,M04,470.175,,Electricidad y agua
+2015-08,M04,309.054,,Electricidad y agua
+2015-09,M04,446.61,,Electricidad y agua
+2015-10,M04,274.601,,Electricidad y agua
+2015-11,M04,397.813,,Electricidad y agua
+2015-12,M04,347.359,,Electricidad y agua
+2016-01,M04,317.271,-17.1722,Electricidad y agua
+2016-02,M04,314.287,-15.4176,Electricidad y agua
+2016-03,M04,386.089,35.2231,Electricidad y agua
+2016-04,M04,302.811,-10.3669,Electricidad y agua
+2016-05,M04,547.757,-3.9212,Electricidad y agua
+2016-06,M04,244.522,-6.0658,Electricidad y agua
+2016-07,M04,404.161,-14.0403,Electricidad y agua
+2016-08,M04,263.946,-14.5955,Electricidad y agua
+2016-09,M04,448.517,0.427,Electricidad y agua
+2016-10,M04,315.948,15.0571,Electricidad y agua
+2016-11,M04,312.931,-21.3372,Electricidad y agua
+2016-12,M04,291.702,-16.0229,Electricidad y agua
+2017-01,M04,371.671,17.1462,Electricidad y agua
+2017-02,M04,309.152,-1.6339,Electricidad y agua
+2017-03,M04,334.691,-13.3125,Electricidad y agua
+2017-04,M04,360.988,19.2123,Electricidad y agua
+2017-05,M04,554.893,1.3028,Electricidad y agua
+2017-06,M04,268.42,9.7734,Electricidad y agua
+2017-07,M04,508.383,25.7872,Electricidad y agua
+2017-08,M04,298.863,13.2288,Electricidad y agua
+2017-09,M04,414.716,-7.5362,Electricidad y agua
+2017-10,M04,259.224,-17.9536,Electricidad y agua
+2017-11,M04,329.499,5.2945,Electricidad y agua
+2017-12,M04,317.095,8.7051,Electricidad y agua
+2018-01,M04,393.17,5.7844,Electricidad y agua
+2018-02,M04,332.806,7.6513,Electricidad y agua
+2018-03,M04,385.497,15.18,Electricidad y agua
+2018-04,M04,368.969,2.2109,Electricidad y agua
+2018-05,M04,653.668,17.8007,Electricidad y agua
+2018-06,M04,251.856,-6.1709,Electricidad y agua
+2018-07,M04,510.667,0.4493,Electricidad y agua
+2018-08,M04,306.316,2.4938,Electricidad y agua
+2018-09,M04,467.163,12.6465,Electricidad y agua
+2018-10,M04,308.512,19.0137,Electricidad y agua
+2018-11,M04,377.336,14.5181,Electricidad y agua
+2018-12,M04,302.884,-4.4816,Electricidad y agua
+2019-01,M04,363.41,-7.5692,Electricidad y agua
+2019-02,M04,302.578,-9.0828,Electricidad y agua
+2019-03,M04,376.883,-2.2345,Electricidad y agua
+2019-04,M04,370.613,0.4456,Electricidad y agua
+2019-05,M04,684.875,4.7741,Electricidad y agua
+2019-06,M04,275.687,9.4622,Electricidad y agua
+2019-07,M04,469.951,-7.9731,Electricidad y agua
+2019-08,M04,281.698,-8.0368,Electricidad y agua
+2019-09,M04,458.745,-1.8019,Electricidad y agua
+2019-10,M04,286.787,-7.0419,Electricidad y agua
+2019-11,M04,469.882,24.5262,Electricidad y agua
+2019-12,M04,322.24,6.3906,Electricidad y agua
+2020-01,M04,422.271,16.1969,Electricidad y agua
+2020-02,M04,474.801,56.9185,Electricidad y agua
+2020-03,M04,394.198,4.5943,Electricidad y agua
+2020-04,M04,400.501,8.0645,Electricidad y agua
+2020-05,M04,623.108,-9.0187,Electricidad y agua
+2020-06,M04,341.255,23.7835,Electricidad y agua
+2020-07,M04,508.989,8.3068,Electricidad y agua
+2020-08,M04,293.958,4.3522,Electricidad y agua
+2020-09,M04,458.486,-0.0565,Electricidad y agua
+2020-10,M04,355.621,24.0018,Electricidad y agua
+2020-11,M04,385.153,-18.032,Electricidad y agua
+2020-12,M04,394.484,22.4193,Electricidad y agua
+2021-01,M04,402.897,-4.588,Electricidad y agua
+2021-02,M04,441.913,-6.9267,Electricidad y agua
+2021-03,M04,447.889,13.6203,Electricidad y agua
+2021-04,M04,552.566,37.9687,Electricidad y agua
+2021-05,M04,460.105,-26.1597,Electricidad y agua
+2021-06,M04,585.175,71.4773,Electricidad y agua
+2021-07,M04,434.116,-14.7101,Electricidad y agua
+2021-08,M04,548.018,86.4273,Electricidad y agua
+2021-09,M04,638.729,39.3127,Electricidad y agua
+2021-10,M04,650.041,82.7904,Electricidad y agua
+2021-11,M04,471.38,22.3877,Electricidad y agua
+2021-12,M04,523.813,32.7843,Electricidad y agua
+2022-01,M04,639.481,58.7207,Electricidad y agua
+2022-02,M04,474.851,7.4535,Electricidad y agua
+2022-03,M04,569.495,27.1509,Electricidad y agua
+2022-04,M04,585.929,6.0378,Electricidad y agua
+2022-05,M04,525.086,14.1231,Electricidad y agua
+2022-06,M04,656.986,12.2717,Electricidad y agua
+2022-07,M04,507.153,16.8243,Electricidad y agua
+2022-08,M04,587.782,7.256,Electricidad y agua
+2022-09,M04,608.263,-4.7698,Electricidad y agua
+2022-10,M04,676.225,4.0281,Electricidad y agua
+2022-11,M04,562.091,19.2437,Electricidad y agua
+2022-12,M04,660.49,26.0927,Electricidad y agua
+2023-01,M04,628.236,-1.7585,Electricidad y agua
+2023-02,M04,507.802,6.9392,Electricidad y agua
+2023-03,M04,448.467,-21.2518,Electricidad y agua
+2023-04,M04,589.607,0.6277,Electricidad y agua
+2023-05,M04,495.449,-5.6442,Electricidad y agua
+2023-06,M04,674.622,2.6844,Electricidad y agua
+2023-07,M04,546.471,7.7527,Electricidad y agua
+2023-08,M04,512.285,-12.8444,Electricidad y agua
+2023-09,M04,636.781,4.6884,Electricidad y agua
+2023-10,M04,745.543,10.2507,Electricidad y agua
+2023-11,M04,568.613,1.1603,Electricidad y agua
+2023-12,M04,714.543,8.1838,Electricidad y agua
+2024-01,M04,571.035,-9.105,Electricidad y agua
+2024-02,M04,514.859,1.3897,Electricidad y agua
+2024-03,M04,580.277,29.3912,Electricidad y agua
+2024-04,M04,607.884,3.0999,Electricidad y agua
+2024-05,M04,508.279,2.5896,Electricidad y agua
+2024-06,M04,644.826,-4.4167,Electricidad y agua
+2024-07,M04,490.574,-10.2287,Electricidad y agua
+2024-08,M04,558.232,8.969,Electricidad y agua
+2024-09,M04,725.509,13.9338,Electricidad y agua
+2024-10,M04,771.238,3.4465,Electricidad y agua
+2024-11,M04,608.986,7.1003,Electricidad y agua
+2024-12,M04,645.053,-9.7251,Electricidad y agua
+2025-01,M04,655.352,14.7656,Electricidad y agua
+2025-02,M04,541.468,5.1682,Electricidad y agua
+2025-03,M04,582.637,0.4067,Electricidad y agua
+2025-04,M04,584.737,-3.8078,Electricidad y agua
+2025-05,M04,511.593,0.652,Electricidad y agua
+2025-06,M04,782.012,21.2749,Electricidad y agua
+2025-07,M04,542.918,10.6699,Electricidad y agua
+2025-08,M04,572.544,2.5638,Electricidad y agua
+2025-09,M04,646.35,-10.9108,Electricidad y agua
+2025-10,M04,729.674,-5.3893,Electricidad y agua
+2025-11,M04,642.551,5.5116,Electricidad y agua
+2025-12,M04,608.993,-5.5902,Electricidad y agua
+2026-01,M04,585.927,-10.5935,Electricidad y agua
+2026-02,M04,690.916,27.6005,Electricidad y agua
+2026-03,M04,708.064,21.5275,Electricidad y agua
+2015-01,M05,1478.036,,Construcción
+2015-02,M05,1305.159,,Construcción
+2015-03,M05,1619.909,,Construcción
+2015-04,M05,1445.318,,Construcción
+2015-05,M05,1438.1,,Construcción
+2015-06,M05,1448.115,,Construcción
+2015-07,M05,1519.741,,Construcción
+2015-08,M05,1371.289,,Construcción
+2015-09,M05,1534.092,,Construcción
+2015-10,M05,1477.444,,Construcción
+2015-11,M05,1495.006,,Construcción
+2015-12,M05,1581.014,,Construcción
+2016-01,M05,1543.407,4.4228,Construcción
+2016-02,M05,1383.342,5.9903,Construcción
+2016-03,M05,1430.612,-11.6857,Construcción
+2016-04,M05,1454.954,0.6667,Construcción
+2016-05,M05,1523.562,5.9427,Construcción
+2016-06,M05,1540.389,6.372,Construcción
+2016-07,M05,1347.081,-11.3611,Construcción
+2016-08,M05,1377.863,0.4794,Construcción
+2016-09,M05,1619.786,5.586,Construcción
+2016-10,M05,1463.888,-0.9175,Construcción
+2016-11,M05,1580.205,5.6989,Construcción
+2016-12,M05,1563.029,-1.1376,Construcción
+2017-01,M05,1460.798,-5.3524,Construcción
+2017-02,M05,1366.019,-1.2523,Construcción
+2017-03,M05,1409.79,-1.4555,Construcción
+2017-04,M05,1334.879,-8.2528,Construcción
+2017-05,M05,1493.457,-1.976,Construcción
+2017-06,M05,1522.301,-1.1742,Construcción
+2017-07,M05,1450.041,7.6432,Construcción
+2017-08,M05,1402.223,1.768,Construcción
+2017-09,M05,1369.932,-15.4251,Construcción
+2017-10,M05,1543.589,5.4445,Construcción
+2017-11,M05,1419.338,-10.1801,Construcción
+2017-12,M05,1579.816,1.074,Construcción
+2018-01,M05,1365.837,-6.5006,Construcción
+2018-02,M05,1313.017,-3.88,Construcción
+2018-03,M05,1305.556,-7.3936,Construcción
+2018-04,M05,1381.895,3.5221,Construcción
+2018-05,M05,1458.467,-2.3429,Construcción
+2018-06,M05,1361.673,-10.5517,Construcción
+2018-07,M05,1416.74,-2.2966,Construcción
+2018-08,M05,1302.82,-7.089,Construcción
+2018-09,M05,1545.727,12.8324,Construcción
+2018-10,M05,1457.128,-5.6013,Construcción
+2018-11,M05,1469.721,3.5498,Construcción
+2018-12,M05,1554.607,-1.5957,Construcción
+2019-01,M05,1445.549,5.8361,Construcción
+2019-02,M05,1289.12,-1.82,Construcción
+2019-03,M05,1395.0,6.851,Construcción
+2019-04,M05,1452.68,5.1223,Construcción
+2019-05,M05,1382.8,-5.1881,Construcción
+2019-06,M05,1519.269,11.5737,Construcción
+2019-07,M05,1407.72,-0.6367,Construcción
+2019-08,M05,1389.826,6.6783,Construcción
+2019-09,M05,1552.775,0.456,Construcción
+2019-10,M05,1444.418,-0.8723,Construcción
+2019-11,M05,1542.919,4.9804,Construcción
+2019-12,M05,1678.342,7.9592,Construcción
+2020-01,M05,1368.128,-5.3558,Construcción
+2020-02,M05,1472.689,14.2399,Construcción
+2020-03,M05,1305.436,-6.4204,Construcción
+2020-04,M05,1200.633232676911,-17.3505,Construcción
+2020-05,M05,1200.633232676911,-13.1738,Construcción
+2020-06,M05,1253.077,-17.5211,Construcción
+2020-07,M05,1285.105,-8.7102,Construcción
+2020-08,M05,1232.449,-11.3235,Construcción
+2020-09,M05,1389.965,-10.4851,Construcción
+2020-10,M05,1401.539,-2.9686,Construcción
+2020-11,M05,1467.137,-4.9116,Construcción
+2020-12,M05,1502.853,-10.4561,Construcción
+2021-01,M05,1412.606,3.251,Construcción
+2021-02,M05,1329.413,-9.7289,Construcción
+2021-03,M05,1691.635,29.5839,Construcción
+2021-04,M05,1501.437,25.0538,Construcción
+2021-05,M05,1364.091,13.6143,Construcción
+2021-06,M05,1447.259,15.4964,Construcción
+2021-07,M05,1475.387,14.8067,Construcción
+2021-08,M05,1550.03,25.7683,Construcción
+2021-09,M05,1472.252,5.9201,Construcción
+2021-10,M05,1463.497,4.4207,Construcción
+2021-11,M05,1615.636,10.1217,Construcción
+2021-12,M05,1547.735,2.9865,Construcción
+2022-01,M05,1550.701,9.7759,Construcción
+2022-02,M05,1552.137,16.7536,Construcción
+2022-03,M05,1492.673,-11.7615,Construcción
+2022-04,M05,1515.861,0.9607,Construcción
+2022-05,M05,1514.384,11.0178,Construcción
+2022-06,M05,1624.669,12.2583,Construcción
+2022-07,M05,1476.216,0.0562,Construcción
+2022-08,M05,1667.077,7.5513,Construcción
+2022-09,M05,1488.228,1.0851,Construcción
+2022-10,M05,1473.372,0.6748,Construcción
+2022-11,M05,1520.328,-5.8991,Construcción
+2022-12,M05,1684.199,8.817,Construcción
+2023-01,M05,1402.307,-9.5695,Construcción
+2023-02,M05,1524.68,-1.769,Construcción
+2023-03,M05,1610.066,7.8646,Construcción
+2023-04,M05,1584.112,4.5025,Construcción
+2023-05,M05,1432.241,-5.4242,Construcción
+2023-06,M05,1626.638,0.1212,Construcción
+2023-07,M05,1710.211,15.851,Construcción
+2023-08,M05,1615.592,-3.0883,Construcción
+2023-09,M05,1526.446,2.568,Construcción
+2023-10,M05,1514.149,2.7676,Construcción
+2023-11,M05,1641.803,7.9901,Construcción
+2023-12,M05,1596.084,-5.2319,Construcción
+2024-01,M05,1453.668,3.6626,Construcción
+2024-02,M05,1474.535,-3.2889,Construcción
+2024-03,M05,1536.653,-4.5596,Construcción
+2024-04,M05,1581.305,-0.1772,Construcción
+2024-05,M05,1592.361,11.1797,Construcción
+2024-06,M05,1497.147,-7.9607,Construcción
+2024-07,M05,1591.553,-6.9382,Construcción
+2024-08,M05,1531.688,-5.1934,Construcción
+2024-09,M05,1494.934,-2.0644,Construcción
+2024-10,M05,1593.354,5.231,Construcción
+2024-11,M05,1495.9,-8.8868,Construcción
+2024-12,M05,1669.358,4.5909,Construcción
+2025-01,M05,1496.698,2.9601,Construcción
+2025-02,M05,1693.194,14.829,Construcción
+2025-03,M05,1661.729,8.1395,Construcción
+2025-04,M05,1546.955,-2.1723,Construcción
+2025-05,M05,1550.596,-2.6228,Construcción
+2025-06,M05,1532.386,2.3537,Construcción
+2025-07,M05,1667.346,4.7622,Construcción
+2025-08,M05,1709.857,11.6322,Construcción
+2025-09,M05,1561.21,4.4334,Construcción
+2025-10,M05,1525.104,-4.2834,Construcción
+2025-11,M05,1679.805,12.2939,Construcción
+2025-12,M05,1630.402,-2.3336,Construcción
+2026-01,M05,1585.491,5.9326,Construcción
+2026-02,M05,1655.296,-2.2383,Construcción
+2026-03,M05,1744.177,4.9616,Construcción
+2015-01,M06,6797.992,,"Comercio, transporte y turismo"
+2015-02,M06,6494.264,,"Comercio, transporte y turismo"
+2015-03,M06,6759.521000000001,,"Comercio, transporte y turismo"
+2015-04,M06,6830.615,,"Comercio, transporte y turismo"
+2015-05,M06,6863.398,,"Comercio, transporte y turismo"
+2015-06,M06,6791.396,,"Comercio, transporte y turismo"
+2015-07,M06,6736.631,,"Comercio, transporte y turismo"
+2015-08,M06,6839.727,,"Comercio, transporte y turismo"
+2015-09,M06,7007.778,,"Comercio, transporte y turismo"
+2015-10,M06,6927.449,,"Comercio, transporte y turismo"
+2015-11,M06,6786.896,,"Comercio, transporte y turismo"
+2015-12,M06,6943.7029999999995,,"Comercio, transporte y turismo"
+2016-01,M06,7079.846,4.1461,"Comercio, transporte y turismo"
+2016-02,M06,6702.577,3.2076,"Comercio, transporte y turismo"
+2016-03,M06,6825.13,0.9706,"Comercio, transporte y turismo"
+2016-04,M06,6900.3,1.0202,"Comercio, transporte y turismo"
+2016-05,M06,6818.889999999999,-0.6485,"Comercio, transporte y turismo"
+2016-06,M06,6844.202,0.7775,"Comercio, transporte y turismo"
+2016-07,M06,6978.981,3.5975,"Comercio, transporte y turismo"
+2016-08,M06,6815.013,-0.3613,"Comercio, transporte y turismo"
+2016-09,M06,6811.114,-2.8064,"Comercio, transporte y turismo"
+2016-10,M06,7117.530000000001,2.7439,"Comercio, transporte y turismo"
+2016-11,M06,7042.507,3.7662,"Comercio, transporte y turismo"
+2016-12,M06,7047.128,1.4895,"Comercio, transporte y turismo"
+2017-01,M06,7018.178,-0.871,"Comercio, transporte y turismo"
+2017-02,M06,6907.593,3.0588,"Comercio, transporte y turismo"
+2017-03,M06,6783.827,-0.6052,"Comercio, transporte y turismo"
+2017-04,M06,6774.861,-1.8179,"Comercio, transporte y turismo"
+2017-05,M06,6857.76,0.57,"Comercio, transporte y turismo"
+2017-06,M06,6871.098,0.393,"Comercio, transporte y turismo"
+2017-07,M06,6821.334,-2.2589,"Comercio, transporte y turismo"
+2017-08,M06,6721.532,-1.3717,"Comercio, transporte y turismo"
+2017-09,M06,6856.621999999999,0.6681,"Comercio, transporte y turismo"
+2017-10,M06,7164.776,0.6638,"Comercio, transporte y turismo"
+2017-11,M06,6821.901,-3.1325,"Comercio, transporte y turismo"
+2017-12,M06,7151.594999999999,1.4824,"Comercio, transporte y turismo"
+2018-01,M06,7007.489,-0.1523,"Comercio, transporte y turismo"
+2018-02,M06,6713.739,-2.8064,"Comercio, transporte y turismo"
+2018-03,M06,6883.492,1.4692,"Comercio, transporte y turismo"
+2018-04,M06,7109.863,4.9448,"Comercio, transporte y turismo"
+2018-05,M06,6811.115,-0.6802,"Comercio, transporte y turismo"
+2018-06,M06,6834.523,-0.5323,"Comercio, transporte y turismo"
+2018-07,M06,6925.95,1.5337,"Comercio, transporte y turismo"
+2018-08,M06,6804.863,1.2398,"Comercio, transporte y turismo"
+2018-09,M06,7088.9839999999995,3.3889,"Comercio, transporte y turismo"
+2018-10,M06,7005.209,-2.2271,"Comercio, transporte y turismo"
+2018-11,M06,6596.22,-3.3082,"Comercio, transporte y turismo"
+2018-12,M06,6972.467,-2.5047,"Comercio, transporte y turismo"
+2019-01,M06,7106.6230000000005,1.4147,"Comercio, transporte y turismo"
+2019-02,M06,7024.654,4.631,"Comercio, transporte y turismo"
+2019-03,M06,6992.595,1.585,"Comercio, transporte y turismo"
+2019-04,M06,6805.02,-4.2876,"Comercio, transporte y turismo"
+2019-05,M06,7003.544,2.8252,"Comercio, transporte y turismo"
+2019-06,M06,6788.3060000000005,-0.6762,"Comercio, transporte y turismo"
+2019-07,M06,6935.811,0.1424,"Comercio, transporte y turismo"
+2019-08,M06,6894.232,1.3133,"Comercio, transporte y turismo"
+2019-09,M06,6994.316,-1.3354,"Comercio, transporte y turismo"
+2019-10,M06,7076.32,1.0151,"Comercio, transporte y turismo"
+2019-11,M06,7364.093,11.6411,"Comercio, transporte y turismo"
+2019-12,M06,7382.691000000001,5.8835,"Comercio, transporte y turismo"
+2020-01,M06,7021.125,-1.2031,"Comercio, transporte y turismo"
+2020-02,M06,7077.89,0.7578,"Comercio, transporte y turismo"
+2020-03,M06,6806.293,-2.6643,"Comercio, transporte y turismo"
+2020-04,M06,6107.412547553015,-10.2514,"Comercio, transporte y turismo"
+2020-05,M06,6107.412547553015,-12.7954,"Comercio, transporte y turismo"
+2020-06,M06,6107.412547553015,-10.0304,"Comercio, transporte y turismo"
+2020-07,M06,6107.412547553015,-11.9438,"Comercio, transporte y turismo"
+2020-08,M06,6107.412547553015,-11.4127,"Comercio, transporte y turismo"
+2020-09,M06,6363.322,-9.0215,"Comercio, transporte y turismo"
+2020-10,M06,6646.128,-6.0793,"Comercio, transporte y turismo"
+2020-11,M06,6682.455,-9.2562,"Comercio, transporte y turismo"
+2020-12,M06,6827.348,-7.5222,"Comercio, transporte y turismo"
+2021-01,M06,6107.412547553015,-13.0138,"Comercio, transporte y turismo"
+2021-02,M06,6437.246999999999,-9.0513,"Comercio, transporte y turismo"
+2021-03,M06,6360.736,-6.5463,"Comercio, transporte y turismo"
+2021-04,M06,6245.602,2.2627,"Comercio, transporte y turismo"
+2021-05,M06,6149.175,0.6838,"Comercio, transporte y turismo"
+2021-06,M06,6555.807,7.3418,"Comercio, transporte y turismo"
+2021-07,M06,6532.481,6.9599,"Comercio, transporte y turismo"
+2021-08,M06,6564.2609999999995,7.4802,"Comercio, transporte y turismo"
+2021-09,M06,6595.077,3.642,"Comercio, transporte y turismo"
+2021-10,M06,6719.242,1.1001,"Comercio, transporte y turismo"
+2021-11,M06,6828.562,2.1864,"Comercio, transporte y turismo"
+2021-12,M06,6918.697,1.338,"Comercio, transporte y turismo"
+2022-01,M06,6630.561,8.5658,"Comercio, transporte y turismo"
+2022-02,M06,7025.164000000001,9.1331,"Comercio, transporte y turismo"
+2022-03,M06,7039.403,10.6696,"Comercio, transporte y turismo"
+2022-04,M06,7161.208,14.66,"Comercio, transporte y turismo"
+2022-05,M06,6833.844,11.1343,"Comercio, transporte y turismo"
+2022-06,M06,7080.347,8.0012,"Comercio, transporte y turismo"
+2022-07,M06,7053.7300000000005,7.9793,"Comercio, transporte y turismo"
+2022-08,M06,7115.775,8.4018,"Comercio, transporte y turismo"
+2022-09,M06,7349.374,11.4373,"Comercio, transporte y turismo"
+2022-10,M06,7283.536999999999,8.3982,"Comercio, transporte y turismo"
+2022-11,M06,7028.47,2.9275,"Comercio, transporte y turismo"
+2022-12,M06,6976.364,0.8335,"Comercio, transporte y turismo"
+2023-01,M06,7167.324,8.0953,"Comercio, transporte y turismo"
+2023-02,M06,7430.8150000000005,5.7743,"Comercio, transporte y turismo"
+2023-03,M06,7195.064,2.2113,"Comercio, transporte y turismo"
+2023-04,M06,7302.271,1.9698,"Comercio, transporte y turismo"
+2023-05,M06,7404.160000000001,8.3455,"Comercio, transporte y turismo"
+2023-06,M06,7405.74,4.5957,"Comercio, transporte y turismo"
+2023-07,M06,7514.648999999999,6.5344,"Comercio, transporte y turismo"
+2023-08,M06,7222.946,1.5061,"Comercio, transporte y turismo"
+2023-09,M06,7573.154,3.0449,"Comercio, transporte y turismo"
+2023-10,M06,7436.626,2.1018,"Comercio, transporte y turismo"
+2023-11,M06,7283.893,3.6341,"Comercio, transporte y turismo"
+2023-12,M06,7444.614,6.7119,"Comercio, transporte y turismo"
+2024-01,M06,7116.405,-0.7104,"Comercio, transporte y turismo"
+2024-02,M06,7333.719,-1.3067,"Comercio, transporte y turismo"
+2024-03,M06,7286.256,1.2674,"Comercio, transporte y turismo"
+2024-04,M06,7435.417,1.8234,"Comercio, transporte y turismo"
+2024-05,M06,7343.5689999999995,-0.8183,"Comercio, transporte y turismo"
+2024-06,M06,7434.01,0.3817,"Comercio, transporte y turismo"
+2024-07,M06,7316.164000000001,-2.6413,"Comercio, transporte y turismo"
+2024-08,M06,7553.697,4.5792,"Comercio, transporte y turismo"
+2024-09,M06,7603.763999999999,0.4042,"Comercio, transporte y turismo"
+2024-10,M06,7617.039,2.426,"Comercio, transporte y turismo"
+2024-11,M06,7535.07,3.4484,"Comercio, transporte y turismo"
+2024-12,M06,7886.155,5.931,"Comercio, transporte y turismo"
+2025-01,M06,7617.762,7.0451,"Comercio, transporte y turismo"
+2025-02,M06,7748.597,5.6571,"Comercio, transporte y turismo"
+2025-03,M06,7671.107,5.2819,"Comercio, transporte y turismo"
+2025-04,M06,7754.706,4.2942,"Comercio, transporte y turismo"
+2025-05,M06,7739.727,5.3946,"Comercio, transporte y turismo"
+2025-06,M06,7622.057,2.5296,"Comercio, transporte y turismo"
+2025-07,M06,7766.598,6.1567,"Comercio, transporte y turismo"
+2025-08,M06,7623.655,0.9261,"Comercio, transporte y turismo"
+2025-09,M06,7818.329,2.8218,"Comercio, transporte y turismo"
+2025-10,M06,7906.2080000000005,3.7963,"Comercio, transporte y turismo"
+2025-11,M06,7942.933999999999,5.4129,"Comercio, transporte y turismo"
+2025-12,M06,7891.085,0.0625,"Comercio, transporte y turismo"
+2026-01,M06,7444.460999999999,-2.275,"Comercio, transporte y turismo"
+2026-02,M06,7671.957,-0.9891,"Comercio, transporte y turismo"
+2026-03,M06,7806.44,1.7642,"Comercio, transporte y turismo"
+2015-01,M07,379.76,,TIC y economía digital
+2015-02,M07,343.609,,TIC y economía digital
+2015-03,M07,326.8,,TIC y economía digital
+2015-04,M07,411.974,,TIC y economía digital
+2015-05,M07,368.491,,TIC y economía digital
+2015-06,M07,388.992,,TIC y economía digital
+2015-07,M07,370.47,,TIC y economía digital
+2015-08,M07,376.938,,TIC y economía digital
+2015-09,M07,316.084,,TIC y economía digital
+2015-10,M07,383.611,,TIC y economía digital
+2015-11,M07,434.728,,TIC y economía digital
+2015-12,M07,429.967,,TIC y economía digital
+2016-01,M07,319.391,-15.8966,TIC y economía digital
+2016-02,M07,341.612,-8.2389,TIC y economía digital
+2016-03,M07,319.428,-6.244533333333333,TIC y economía digital
+2016-04,M07,325.296,-7.9589,TIC y economía digital
+2016-05,M07,346.373,-9.765933333333335,TIC y economía digital
+2016-06,M07,312.74,-15.548166666666667,TIC y economía digital
+2016-07,M07,310.448,-13.935466666666665,TIC y economía digital
+2016-08,M07,344.761,-14.780166666666668,TIC y economía digital
+2016-09,M07,340.428,-5.678733333333334,TIC y economía digital
+2016-10,M07,321.804,-5.648833333333333,TIC y economía digital
+2016-11,M07,323.026,-11.368266666666665,TIC y economía digital
+2016-12,M07,336.021,-21.218733333333333,TIC y economía digital
+2017-01,M07,290.059,-18.909333333333333,TIC y economía digital
+2017-02,M07,366.288,-7.936633333333333,TIC y economía digital
+2017-03,M07,348.435,2.373533333333333,TIC y economía digital
+2017-04,M07,344.961,7.449866666666666,TIC y economía digital
+2017-05,M07,358.345,6.1941999999999995,TIC y economía digital
+2017-06,M07,339.498,6.019233333333332,TIC y economía digital
+2017-07,M07,350.798,8.336566666666664,TIC y economía digital
+2017-08,M07,336.179,6.354666666666667,TIC y economía digital
+2017-09,M07,342.798,3.734733333333333,TIC y economía digital
+2017-10,M07,333.101,0.5724666666666667,TIC y economía digital
+2017-11,M07,311.477,0.21046666666666658,TIC y economía digital
+2017-12,M07,291.121,-4.4757,TIC y economía digital
+2018-01,M07,298.825,-4.6385,TIC y economía digital
+2018-02,M07,357.65,-4.232833333333333,TIC y economía digital
+2018-03,M07,300.779,-4.3378,TIC y economía digital
+2018-04,M07,314.4,-8.298266666666665,TIC y economía digital
+2018-05,M07,328.654,-10.274033333333334,TIC y economía digital
+2018-06,M07,315.907,-8.031233333333333,TIC y economía digital
+2018-07,M07,323.658,-7.657,TIC y economía digital
+2018-08,M07,311.456,-7.3465,TIC y economía digital
+2018-09,M07,370.676,-2.3194,TIC y economía digital
+2018-10,M07,332.227,0.17200000000000015,TIC y economía digital
+2018-11,M07,298.647,1.2503333333333335,TIC y economía digital
+2018-12,M07,358.867,6.296400000000001,TIC y economía digital
+2019-01,M07,265.972,2.7191666666666676,TIC y economía digital
+2019-02,M07,328.758,1.3994333333333344,TIC y economía digital
+2019-03,M07,305.086,-5.880166666666667,TIC y economía digital
+2019-04,M07,395.067,6.337,TIC y economía digital
+2019-05,M07,342.379,10.4218,TIC y economía digital
+2019-06,M07,338.546,12.333266666666667,TIC y economía digital
+2019-07,M07,259.588,-2.817733333333333,TIC y economía digital
+2019-08,M07,329.563,-2.2718666666666665,TIC y economía digital
+2019-09,M07,343.736,-7.083233333333333,TIC y economía digital
+2019-10,M07,282.555,-5.4684333333333335,TIC y economía digital
+2019-11,M07,266.007,-11.049433333333333,TIC y economía digital
+2019-12,M07,281.434,-15.8192,TIC y economía digital
+2020-01,M07,322.535,-3.746633333333333,TIC y economía digital
+2020-02,M07,303.251,-2.689733333333333,TIC y economía digital
+2020-03,M07,293.404,3.2262666666666675,TIC y economía digital
+2020-04,M07,282.941,-13.323066666666668,TIC y economía digital
+2020-05,M07,255.902,-19.1561,TIC y economía digital
+2020-06,M07,294.057,-22.260133333333332,TIC y economía digital
+2020-07,M07,260.804,-12.643499999999998,TIC y economía digital
+2020-08,M07,256.12,-11.652599999999998,TIC y economía digital
+2020-09,M07,296.333,-11.869033333333332,TIC y economía digital
+2020-10,M07,290.801,-11.052366666666664,TIC y economía digital
+2020-11,M07,319.888,3.127800000000002,TIC y economía digital
+2020-12,M07,310.233,11.135600000000002,TIC y economía digital
+2021-01,M07,386.49,16.772433333333336,TIC y economía digital
+2021-02,M07,366.212,16.941266666666667,TIC y economía digital
+2021-03,M07,357.896,20.857166666666668,TIC y economía digital
+2021-04,M07,340.805,21.0645,TIC y economía digital
+2021-05,M07,316.968,22.098166666666668,TIC y economía digital
+2021-06,M07,366.992,23.038966666666667,TIC y economía digital
+2021-07,M07,348.665,27.4515,TIC y economía digital
+2021-08,M07,340.887,30.529366666666665,TIC y economía digital
+2021-09,M07,360.503,29.479933333333335,TIC y economía digital
+2021-10,M07,389.478,29.561366666666668,TIC y economía digital
+2021-11,M07,418.635,28.818900000000003,TIC y economía digital
+2021-12,M07,379.935,29.08986666666667,TIC y economía digital
+2022-01,M07,385.803,17.71966666666667,TIC y economía digital
+2022-02,M07,399.33,10.444400000000003,TIC y economía digital
+2022-03,M07,344.773,1.732966666666669,TIC y economía digital
+2022-04,M07,418.262,9.368133333333335,TIC y economía digital
+2022-05,M07,338.056,8.571333333333335,TIC y economía digital
+2022-06,M07,474.13,19.524766666666668,TIC y economía digital
+2022-07,M07,339.915,11.112333333333334,TIC y economía digital
+2022-08,M07,371.562,11.894200000000003,TIC y economía digital
+2022-09,M07,365.565,2.631033333333336,TIC y economía digital
+2022-10,M07,353.885,0.4213666666666687,TIC y economía digital
+2022-11,M07,402.746,-3.843299999999998,TIC y economía digital
+2022-12,M07,399.777,-2.570499999999998,TIC y economía digital
+2023-01,M07,430.542,4.341133333333335,TIC y economía digital
+2023-02,M07,355.831,1.9752666666666687,TIC y economía digital
+2023-03,M07,385.605,4.182166666666668,TIC y economía digital
+2023-04,M07,426.537,0.9762000000000018,TIC y economía digital
+2023-05,M07,414.435,12.138400000000003,TIC y economía digital
+2023-06,M07,366.655,0.6347333333333355,TIC y economía digital
+2023-07,M07,373.895,3.3074666666666688,TIC y economía digital
+2023-08,M07,422.227,0.32150000000000273,TIC y economía digital
+2023-09,M07,478.73,18.19616666666667,TIC y economía digital
+2023-10,M07,392.988,18.54716666666667,TIC y economía digital
+2023-11,M07,454.532,18.288,TIC y economía digital
+2023-12,M07,333.286,2.425266666666669,TIC y economía digital
+2024-01,M07,361.866,-6.574966666666664,TIC y economía digital
+2024-02,M07,388.453,-7.805099999999996,TIC y economía digital
+2024-03,M07,330.881,-6.9916666666666645,TIC y economía digital
+2024-04,M07,412.466,-2.774266666666664,TIC y economía digital
+2024-05,M07,389.794,-7.812099999999998,TIC y economía digital
+2024-06,M07,490.96,8.21926666666667,TIC y economía digital
+2024-07,M07,436.584,14.907733333333335,TIC y economía digital
+2024-08,M07,419.321,16.660200000000003,TIC y economía digital
+2024-09,M07,379.91,-1.5212999999999965,TIC y economía digital
+2024-10,M07,349.163,-10.827366666666663,TIC y economía digital
+2024-11,M07,496.598,-7.5129999999999955,TIC y economía digital
+2024-12,M07,415.99,7.639266666666669,TIC y economía digital
+2025-01,M07,368.716,11.987500000000002,TIC y economía digital
+2025-02,M07,351.26,5.7110333333333365,TIC y economía digital
+2025-03,M07,406.93,5.100733333333335,TIC y economía digital
+2025-04,M07,474.589,9.490200000000002,TIC y economía digital
+2025-05,M07,430.986,16.20426666666667,TIC y economía digital
+2025-06,M07,366.72,0.10783333333333663,TIC y economía digital
+2025-07,M07,356.763,-11.006999999999998,TIC y economía digital
+2025-08,M07,408.244,-15.410099999999995,TIC y economía digital
+2025-09,M07,426.547,-2.882999999999998,TIC y economía digital
+2025-10,M07,393.58,7.451700000000002,TIC y economía digital
+2025-11,M07,498.859,8.484033333333336,TIC y economía digital
+2025-12,M07,391.19,2.404866666666669,TIC y economía digital
+2026-01,M07,461.74,6.574266666666669,TIC y economía digital
+2026-02,M07,447.295,15.535866666666669,TIC y economía digital
+2026-03,M07,402.456,17.1566,TIC y economía digital
+2015-01,M08,290.008,,Financiero y seguros
+2015-02,M08,310.047,,Financiero y seguros
+2015-03,M08,247.22,,Financiero y seguros
+2015-04,M08,252.63,,Financiero y seguros
+2015-05,M08,295.848,,Financiero y seguros
+2015-06,M08,315.621,,Financiero y seguros
+2015-07,M08,293.572,,Financiero y seguros
+2015-08,M08,322.686,,Financiero y seguros
+2015-09,M08,324.381,,Financiero y seguros
+2015-10,M08,287.739,,Financiero y seguros
+2015-11,M08,281.542,,Financiero y seguros
+2015-12,M08,305.499,,Financiero y seguros
+2016-01,M08,329.342,13.5631,Financiero y seguros
+2016-02,M08,307.559,-0.8025,Financiero y seguros
+2016-03,M08,294.506,19.1271,Financiero y seguros
+2016-04,M08,284.778,12.7253,Financiero y seguros
+2016-05,M08,296.469,0.2099,Financiero y seguros
+2016-06,M08,314.385,-0.3916,Financiero y seguros
+2016-07,M08,266.567,-9.1988,Financiero y seguros
+2016-08,M08,343.318,6.3938,Financiero y seguros
+2016-09,M08,311.765,-3.8893,Financiero y seguros
+2016-10,M08,326.68,13.5334,Financiero y seguros
+2016-11,M08,346.815,23.1841,Financiero y seguros
+2016-12,M08,262.882,-13.95,Financiero y seguros
+2017-01,M08,296.133,-10.0834,Financiero y seguros
+2017-02,M08,256.563,-16.5809,Financiero y seguros
+2017-03,M08,260.605,-11.5111,Financiero y seguros
+2017-04,M08,287.978,1.1237,Financiero y seguros
+2017-05,M08,275.994,-6.9063,Financiero y seguros
+2017-06,M08,312.123,-0.7195,Financiero y seguros
+2017-07,M08,306.2,14.8679,Financiero y seguros
+2017-08,M08,285.029,-16.9781,Financiero y seguros
+2017-09,M08,291.594,-6.4699,Financiero y seguros
+2017-10,M08,263.501,-19.3397,Financiero y seguros
+2017-11,M08,331.26,-4.4851,Financiero y seguros
+2017-12,M08,266.603,1.4155,Financiero y seguros
+2018-01,M08,254.232,-14.1494,Financiero y seguros
+2018-02,M08,282.913,10.2704,Financiero y seguros
+2018-03,M08,271.638,4.2336,Financiero y seguros
+2018-04,M08,263.526,-8.4909,Financiero y seguros
+2018-05,M08,315.112,14.1735,Financiero y seguros
+2018-06,M08,231.318,-25.8888,Financiero y seguros
+2018-07,M08,276.152,-9.8132,Financiero y seguros
+2018-08,M08,298.309,4.6592,Financiero y seguros
+2018-09,M08,342.621,17.4993,Financiero y seguros
+2018-10,M08,305.185,15.8193,Financiero y seguros
+2018-11,M08,264.934,-20.0223,Financiero y seguros
+2018-12,M08,305.219,14.4845,Financiero y seguros
+2019-01,M08,319.611,25.7163,Financiero y seguros
+2019-02,M08,333.361,17.8316,Financiero y seguros
+2019-03,M08,280.527,3.2724,Financiero y seguros
+2019-04,M08,323.232,22.6566,Financiero y seguros
+2019-05,M08,296.314,-5.9655,Financiero y seguros
+2019-06,M08,263.476,13.9021,Financiero y seguros
+2019-07,M08,302.516,9.5469,Financiero y seguros
+2019-08,M08,271.969,-8.8298,Financiero y seguros
+2019-09,M08,347.964,1.5594,Financiero y seguros
+2019-10,M08,313.964,2.8766,Financiero y seguros
+2019-11,M08,282.919,6.7885,Financiero y seguros
+2019-12,M08,302.849,-0.7765,Financiero y seguros
+2020-01,M08,298.58,-6.5802,Financiero y seguros
+2020-02,M08,306.107,-8.1755,Financiero y seguros
+2020-03,M08,273.098,-2.6482,Financiero y seguros
+2020-04,M08,260.474,-19.4158,Financiero y seguros
+2020-05,M08,281.302,-5.0662,Financiero y seguros
+2020-06,M08,308.571,17.1154,Financiero y seguros
+2020-07,M08,214.322,-29.1535,Financiero y seguros
+2020-08,M08,284.59,4.6406,Financiero y seguros
+2020-09,M08,269.373,-22.586,Financiero y seguros
+2020-10,M08,222.733,-29.0578,Financiero y seguros
+2020-11,M08,282.896,-0.0081,Financiero y seguros
+2020-12,M08,271.351,-10.4006,Financiero y seguros
+2021-01,M08,393.853,31.9087,Financiero y seguros
+2021-02,M08,339.482,10.9031,Financiero y seguros
+2021-03,M08,325.821,19.3055,Financiero y seguros
+2021-04,M08,354.484,36.0919,Financiero y seguros
+2021-05,M08,362.541,28.8796,Financiero y seguros
+2021-06,M08,363.876,17.9229,Financiero y seguros
+2021-07,M08,348.581,62.6436,Financiero y seguros
+2021-08,M08,344.358,21.0014,Financiero y seguros
+2021-09,M08,470.562,74.6879,Financiero y seguros
+2021-10,M08,354.583,59.1964,Financiero y seguros
+2021-11,M08,329.937,16.6284,Financiero y seguros
+2021-12,M08,406.634,49.8554,Financiero y seguros
+2022-01,M08,448.619,13.9052,Financiero y seguros
+2022-02,M08,409.906,20.7445,Financiero y seguros
+2022-03,M08,356.02,9.2686,Financiero y seguros
+2022-04,M08,378.867,6.8784,Financiero y seguros
+2022-05,M08,443.572,22.3509,Financiero y seguros
+2022-06,M08,393.675,8.1893,Financiero y seguros
+2022-07,M08,441.249,26.5844,Financiero y seguros
+2022-08,M08,399.129,15.9052,Financiero y seguros
+2022-09,M08,463.599,-1.4797,Financiero y seguros
+2022-10,M08,463.597,30.7443,Financiero y seguros
+2022-11,M08,392.059,18.8284,Financiero y seguros
+2022-12,M08,437.811,7.6671,Financiero y seguros
+2023-01,M08,380.155,-15.2611,Financiero y seguros
+2023-02,M08,403.564,-1.5472,Financiero y seguros
+2023-03,M08,357.354,0.3747,Financiero y seguros
+2023-04,M08,393.967,3.9856,Financiero y seguros
+2023-05,M08,467.673,5.4334,Financiero y seguros
+2023-06,M08,428.057,8.7336,Financiero y seguros
+2023-07,M08,465.816,5.5676,Financiero y seguros
+2023-08,M08,435.557,9.1269,Financiero y seguros
+2023-09,M08,399.312,-13.8669,Financiero y seguros
+2023-10,M08,408.611,-11.8607,Financiero y seguros
+2023-11,M08,486.049,23.9734,Financiero y seguros
+2023-12,M08,440.966,0.7206,Financiero y seguros
+2024-01,M08,422.549,11.1518,Financiero y seguros
+2024-02,M08,471.049,16.7223,Financiero y seguros
+2024-03,M08,390.588,9.3,Financiero y seguros
+2024-04,M08,470.655,19.4656,Financiero y seguros
+2024-05,M08,412.932,-11.705,Financiero y seguros
+2024-06,M08,448.917,4.8732,Financiero y seguros
+2024-07,M08,438.777,-5.8047,Financiero y seguros
+2024-08,M08,376.202,-13.6274,Financiero y seguros
+2024-09,M08,346.628,-13.1937,Financiero y seguros
+2024-10,M08,404.354,-1.0418,Financiero y seguros
+2024-11,M08,417.947,-14.0113,Financiero y seguros
+2024-12,M08,459.216,4.1386,Financiero y seguros
+2025-01,M08,483.989,14.5403,Financiero y seguros
+2025-02,M08,450.146,-4.4375,Financiero y seguros
+2025-03,M08,319.485,-18.2041,Financiero y seguros
+2025-04,M08,416.925,-11.416,Financiero y seguros
+2025-05,M08,433.272,4.9258,Financiero y seguros
+2025-06,M08,434.648,-3.1785,Financiero y seguros
+2025-07,M08,475.338,8.3325,Financiero y seguros
+2025-08,M08,478.557,27.2075,Financiero y seguros
+2025-09,M08,433.098,24.9461,Financiero y seguros
+2025-10,M08,441.096,9.0866,Financiero y seguros
+2025-11,M08,449.281,7.4971,Financiero y seguros
+2025-12,M08,418.718,-8.8189,Financiero y seguros
+2026-01,M08,488.498,0.9316,Financiero y seguros
+2026-02,M08,475.085,5.5402,Financiero y seguros
+2026-03,M08,558.658,74.862,Financiero y seguros
+2015-01,M09,240.036,,Inmobiliario
+2015-02,M09,227.024,,Inmobiliario
+2015-03,M09,231.83,,Inmobiliario
+2015-04,M09,224.549,,Inmobiliario
+2015-05,M09,242.319,,Inmobiliario
+2015-06,M09,296.901,,Inmobiliario
+2015-07,M09,226.821,,Inmobiliario
+2015-08,M09,244.812,,Inmobiliario
+2015-09,M09,199.253,,Inmobiliario
+2015-10,M09,246.422,,Inmobiliario
+2015-11,M09,268.705,,Inmobiliario
+2015-12,M09,271.631,,Inmobiliario
+2016-01,M09,277.982,15.8085,Inmobiliario
+2016-02,M09,207.046,-8.8,Inmobiliario
+2016-03,M09,212.632,-8.2811,Inmobiliario
+2016-04,M09,268.617,19.6251,Inmobiliario
+2016-05,M09,222.317,-8.2544,Inmobiliario
+2016-06,M09,271.859,-8.4345,Inmobiliario
+2016-07,M09,215.586,-4.9532,Inmobiliario
+2016-08,M09,236.079,-3.5672,Inmobiliario
+2016-09,M09,270.566,35.7902,Inmobiliario
+2016-10,M09,292.291,18.614,Inmobiliario
+2016-11,M09,221.391,-17.6082,Inmobiliario
+2016-12,M09,240.525,-11.4516,Inmobiliario
+2017-01,M09,337.537,21.424,Inmobiliario
+2017-02,M09,269.255,30.046,Inmobiliario
+2017-03,M09,230.735,8.5138,Inmobiliario
+2017-04,M09,263.995,-1.7207,Inmobiliario
+2017-05,M09,193.285,-13.0588,Inmobiliario
+2017-06,M09,267.8,-1.4931,Inmobiliario
+2017-07,M09,252.195,16.9812,Inmobiliario
+2017-08,M09,285.601,20.9769,Inmobiliario
+2017-09,M09,243.303,-10.0763,Inmobiliario
+2017-10,M09,310.936,6.3789,Inmobiliario
+2017-11,M09,259.063,17.016,Inmobiliario
+2017-12,M09,237.689,-1.1791,Inmobiliario
+2018-01,M09,259.793,-23.0327,Inmobiliario
+2018-02,M09,230.161,-14.5193,Inmobiliario
+2018-03,M09,283.389,22.8201,Inmobiliario
+2018-04,M09,272.148,3.0883,Inmobiliario
+2018-05,M09,243.348,25.9011,Inmobiliario
+2018-06,M09,353.033,31.8271,Inmobiliario
+2018-07,M09,263.163,4.349,Inmobiliario
+2018-08,M09,269.057,-5.7927,Inmobiliario
+2018-09,M09,273.632,12.4655,Inmobiliario
+2018-10,M09,310.958,0.0071,Inmobiliario
+2018-11,M09,256.015,-1.1765,Inmobiliario
+2018-12,M09,318.01,33.7925,Inmobiliario
+2019-01,M09,279.524,7.5949,Inmobiliario
+2019-02,M09,220.477,-4.2075,Inmobiliario
+2019-03,M09,289.869,2.2866,Inmobiliario
+2019-04,M09,216.219,-20.551,Inmobiliario
+2019-05,M09,260.413,7.0126,Inmobiliario
+2019-06,M09,265.923,-24.6747,Inmobiliario
+2019-07,M09,308.439,17.2045,Inmobiliario
+2019-08,M09,256.752,-4.5734,Inmobiliario
+2019-09,M09,289.492,5.7961,Inmobiliario
+2019-10,M09,294.346,-5.3422,Inmobiliario
+2019-11,M09,272.151,6.3028,Inmobiliario
+2019-12,M09,234.811,-26.1624,Inmobiliario
+2020-01,M09,299.15,7.0212,Inmobiliario
+2020-02,M09,247.848,12.4144,Inmobiliario
+2020-03,M09,225.114,-22.3394,Inmobiliario
+2020-04,M09,155.959,-27.8699,Inmobiliario
+2020-05,M09,157.842,-39.3878,Inmobiliario
+2020-06,M09,208.886,-21.4487,Inmobiliario
+2020-07,M09,199.141,-35.4359,Inmobiliario
+2020-08,M09,235.899,-8.1218,Inmobiliario
+2020-09,M09,253.447,-12.4511,Inmobiliario
+2020-10,M09,276.241,-6.1509,Inmobiliario
+2020-11,M09,234.717,-13.7549,Inmobiliario
+2020-12,M09,235.608,0.3394,Inmobiliario
+2021-01,M09,136.148359024179,-54.4883,Inmobiliario
+2021-02,M09,148.932,-39.9099,Inmobiliario
+2021-03,M09,156.974,-30.2691,Inmobiliario
+2021-04,M09,144.49,-7.3539,Inmobiliario
+2021-05,M09,197.255,24.9699,Inmobiliario
+2021-06,M09,194.622,-6.8286,Inmobiliario
+2021-07,M09,204.697,2.79,Inmobiliario
+2021-08,M09,183.869,-22.056,Inmobiliario
+2021-09,M09,159.909,-36.9063,Inmobiliario
+2021-10,M09,159.919,-42.1089,Inmobiliario
+2021-11,M09,200.642,-14.5175,Inmobiliario
+2021-12,M09,181.375,-23.0183,Inmobiliario
+2022-01,M09,183.689,34.9183,Inmobiliario
+2022-02,M09,176.429,18.4628,Inmobiliario
+2022-03,M09,182.804,16.455,Inmobiliario
+2022-04,M09,223.175,54.4571,Inmobiliario
+2022-05,M09,227.849,15.5099,Inmobiliario
+2022-06,M09,202.627,4.1131,Inmobiliario
+2022-07,M09,239.294,16.9016,Inmobiliario
+2022-08,M09,236.812,28.7939,Inmobiliario
+2022-09,M09,240.675,50.5075,Inmobiliario
+2022-10,M09,225.73,41.1527,Inmobiliario
+2022-11,M09,247.318,23.2633,Inmobiliario
+2022-12,M09,268.981,48.301,Inmobiliario
+2023-01,M09,245.442,33.6182,Inmobiliario
+2023-02,M09,246.154,39.5201,Inmobiliario
+2023-03,M09,261.953,43.2972,Inmobiliario
+2023-04,M09,242.559,8.6856,Inmobiliario
+2023-05,M09,246.439,8.1589,Inmobiliario
+2023-06,M09,268.96,32.7365,Inmobiliario
+2023-07,M09,296.871,24.0612,Inmobiliario
+2023-08,M09,387.531,63.645,Inmobiliario
+2023-09,M09,283.147,17.647,Inmobiliario
+2023-10,M09,308.77,36.7873,Inmobiliario
+2023-11,M09,270.485,9.3673,Inmobiliario
+2023-12,M09,244.861,-8.9672,Inmobiliario
+2024-01,M09,283.846,15.6469,Inmobiliario
+2024-02,M09,318.885,29.547,Inmobiliario
+2024-03,M09,284.867,8.7474,Inmobiliario
+2024-04,M09,235.357,-2.9692,Inmobiliario
+2024-05,M09,294.998,19.7043,Inmobiliario
+2024-06,M09,345.944,28.6228,Inmobiliario
+2024-07,M09,342.136,15.2474,Inmobiliario
+2024-08,M09,316.493,-18.3309,Inmobiliario
+2024-09,M09,255.092,-9.9083,Inmobiliario
+2024-10,M09,301.914,-2.2204,Inmobiliario
+2024-11,M09,289.956,7.1986,Inmobiliario
+2024-12,M09,389.816,59.1989,Inmobiliario
+2025-01,M09,370.903,30.6705,Inmobiliario
+2025-02,M09,249.887,-21.6373,Inmobiliario
+2025-03,M09,328.07,15.166,Inmobiliario
+2025-04,M09,290.29,23.3403,Inmobiliario
+2025-05,M09,336.997,14.237,Inmobiliario
+2025-06,M09,305.512,-11.6874,Inmobiliario
+2025-07,M09,341.76,-0.1099,Inmobiliario
+2025-08,M09,360.141,13.7911,Inmobiliario
+2025-09,M09,282.085,10.5817,Inmobiliario
+2025-10,M09,303.424,0.5001,Inmobiliario
+2025-11,M09,338.633,16.7877,Inmobiliario
+2025-12,M09,355.816,-8.7221,Inmobiliario
+2026-01,M09,331.652,-10.5826,Inmobiliario
+2026-02,M09,268.374,7.3981,Inmobiliario
+2026-03,M09,332.447,1.3342,Inmobiliario
+2015-01,M10,1129.645,,Servicios profesionales
+2015-02,M10,1094.059,,Servicios profesionales
+2015-03,M10,1154.564,,Servicios profesionales
+2015-04,M10,1102.028,,Servicios profesionales
+2015-05,M10,1160.89,,Servicios profesionales
+2015-06,M10,1251.179,,Servicios profesionales
+2015-07,M10,1158.136,,Servicios profesionales
+2015-08,M10,1209.249,,Servicios profesionales
+2015-09,M10,1118.794,,Servicios profesionales
+2015-10,M10,1132.616,,Servicios profesionales
+2015-11,M10,1373.228,,Servicios profesionales
+2015-12,M10,1211.969,,Servicios profesionales
+2016-01,M10,1142.231,1.1142,Servicios profesionales
+2016-02,M10,1190.181,8.7858,Servicios profesionales
+2016-03,M10,1196.248,3.6104,Servicios profesionales
+2016-04,M10,1309.752,18.8492,Servicios profesionales
+2016-05,M10,1243.174,7.088,Servicios profesionales
+2016-06,M10,1273.148,1.7559,Servicios profesionales
+2016-07,M10,1162.17,0.3483,Servicios profesionales
+2016-08,M10,1221.529,1.0155,Servicios profesionales
+2016-09,M10,1265.545,13.1169,Servicios profesionales
+2016-10,M10,1397.186,23.3592,Servicios profesionales
+2016-11,M10,1261.293,-8.1512,Servicios profesionales
+2016-12,M10,1240.135,2.324,Servicios profesionales
+2017-01,M10,1214.13,6.2946,Servicios profesionales
+2017-02,M10,1256.391,5.563,Servicios profesionales
+2017-03,M10,1163.065,-2.7739,Servicios profesionales
+2017-04,M10,1359.227,3.7774,Servicios profesionales
+2017-05,M10,1287.544,3.5691,Servicios profesionales
+2017-06,M10,1271.146,-0.1572,Servicios profesionales
+2017-07,M10,1265.997,8.9339,Servicios profesionales
+2017-08,M10,1430.042,17.0698,Servicios profesionales
+2017-09,M10,1319.245,4.2432,Servicios profesionales
+2017-10,M10,1318.682,-5.6187,Servicios profesionales
+2017-11,M10,1406.756,11.5328,Servicios profesionales
+2017-12,M10,1342.403,8.2465,Servicios profesionales
+2018-01,M10,1286.625,5.9709,Servicios profesionales
+2018-02,M10,1286.275,2.3786,Servicios profesionales
+2018-03,M10,1301.577,11.9092,Servicios profesionales
+2018-04,M10,1213.902,-10.6917,Servicios profesionales
+2018-05,M10,1285.209,-0.1814,Servicios profesionales
+2018-06,M10,1388.626,9.2421,Servicios profesionales
+2018-07,M10,1248.568,-1.3767,Servicios profesionales
+2018-08,M10,1302.526,-8.9169,Servicios profesionales
+2018-09,M10,1339.891,1.565,Servicios profesionales
+2018-10,M10,1392.748,5.6167,Servicios profesionales
+2018-11,M10,1365.069,-2.9633,Servicios profesionales
+2018-12,M10,1367.387,1.8611,Servicios profesionales
+2019-01,M10,1211.24,-5.8591,Servicios profesionales
+2019-02,M10,1272.822,-1.0459,Servicios profesionales
+2019-03,M10,1205.922,-7.3492,Servicios profesionales
+2019-04,M10,1381.406,13.7988,Servicios profesionales
+2019-05,M10,1300.707,1.2059,Servicios profesionales
+2019-06,M10,1331.19,-4.1362,Servicios profesionales
+2019-07,M10,1260.658,0.9683,Servicios profesionales
+2019-08,M10,1332.442,2.2968,Servicios profesionales
+2019-09,M10,1442.948,7.6914,Servicios profesionales
+2019-10,M10,1405.029,0.8818,Servicios profesionales
+2019-11,M10,1399.304,2.5079,Servicios profesionales
+2019-12,M10,1366.239,-0.084,Servicios profesionales
+2020-01,M10,1398.836,15.4879,Servicios profesionales
+2020-02,M10,1277.577,0.3736,Servicios profesionales
+2020-03,M10,1305.081,8.2227,Servicios profesionales
+2020-04,M10,1054.914,-23.6348,Servicios profesionales
+2020-05,M10,1171.03,-9.9697,Servicios profesionales
+2020-06,M10,1191.027,-10.5292,Servicios profesionales
+2020-07,M10,1099.351,-12.7955,Servicios profesionales
+2020-08,M10,1070.434,-19.6637,Servicios profesionales
+2020-09,M10,1207.709,-16.3027,Servicios profesionales
+2020-10,M10,1187.718,-15.4667,Servicios profesionales
+2020-11,M10,1298.997,-7.1683,Servicios profesionales
+2020-12,M10,1330.203,-2.6376,Servicios profesionales
+2021-01,M10,1484.79,6.1447,Servicios profesionales
+2021-02,M10,1699.544,33.0287,Servicios profesionales
+2021-03,M10,1549.832,18.7537,Servicios profesionales
+2021-04,M10,1599.635,51.6365,Servicios profesionales
+2021-05,M10,1617.483,38.1248,Servicios profesionales
+2021-06,M10,1637.417,37.4794,Servicios profesionales
+2021-07,M10,1631.544,48.4097,Servicios profesionales
+2021-08,M10,1712.657,59.9965,Servicios profesionales
+2021-09,M10,1708.135,41.436,Servicios profesionales
+2021-10,M10,1733.22,45.9286,Servicios profesionales
+2021-11,M10,1785.776,37.4735,Servicios profesionales
+2021-12,M10,1868.794,40.4894,Servicios profesionales
+2022-01,M10,1705.737,14.8807,Servicios profesionales
+2022-02,M10,1777.809,4.6051,Servicios profesionales
+2022-03,M10,1529.767,-1.2947,Servicios profesionales
+2022-04,M10,1729.091,8.0928,Servicios profesionales
+2022-05,M10,1726.431,6.7357,Servicios profesionales
+2022-06,M10,1554.329,-5.0743,Servicios profesionales
+2022-07,M10,1820.928,11.6077,Servicios profesionales
+2022-08,M10,1805.652,5.4299,Servicios profesionales
+2022-09,M10,1740.112,1.872,Servicios profesionales
+2022-10,M10,1714.426,-1.0843,Servicios profesionales
+2022-11,M10,1871.191,4.7831,Servicios profesionales
+2022-12,M10,1827.624,-2.203,Servicios profesionales
+2023-01,M10,1913.545,12.1829,Servicios profesionales
+2023-02,M10,1756.112,-1.2204,Servicios profesionales
+2023-03,M10,1793.156,17.2176,Servicios profesionales
+2023-04,M10,1745.571,0.9531,Servicios profesionales
+2023-05,M10,1753.66,1.5772,Servicios profesionales
+2023-06,M10,1820.362,17.1156,Servicios profesionales
+2023-07,M10,1761.212,-3.2794,Servicios profesionales
+2023-08,M10,1894.569,4.9244,Servicios profesionales
+2023-09,M10,1747.14,0.4039,Servicios profesionales
+2023-10,M10,1770.845,3.2908,Servicios profesionales
+2023-11,M10,1941.276,3.7455,Servicios profesionales
+2023-12,M10,1965.609,7.55,Servicios profesionales
+2024-01,M10,1851.899,-3.2216,Servicios profesionales
+2024-02,M10,1641.056,-6.5517,Servicios profesionales
+2024-03,M10,1826.049,1.8344,Servicios profesionales
+2024-04,M10,1808.515,3.6059,Servicios profesionales
+2024-05,M10,1737.143,-0.9419,Servicios profesionales
+2024-06,M10,1710.709,-6.0237,Servicios profesionales
+2024-07,M10,1821.507,3.4235,Servicios profesionales
+2024-08,M10,1835.435,-3.1212,Servicios profesionales
+2024-09,M10,1922.739,10.0507,Servicios profesionales
+2024-10,M10,1673.375,-5.5042,Servicios profesionales
+2024-11,M10,1892.325,-2.5216,Servicios profesionales
+2024-12,M10,1846.008,-6.0847,Servicios profesionales
+2025-01,M10,1734.198,-6.3557,Servicios profesionales
+2025-02,M10,1748.546,6.5501,Servicios profesionales
+2025-03,M10,1777.76,-2.6445,Servicios profesionales
+2025-04,M10,1787.925,-1.1385,Servicios profesionales
+2025-05,M10,1873.95,7.8754,Servicios profesionales
+2025-06,M10,1822.266,6.5211,Servicios profesionales
+2025-07,M10,1936.324,6.3034,Servicios profesionales
+2025-08,M10,1780.785,-2.9775,Servicios profesionales
+2025-09,M10,1711.054,-11.0096,Servicios profesionales
+2025-10,M10,1811.208,8.2368,Servicios profesionales
+2025-11,M10,1842.993,-2.607,Servicios profesionales
+2025-12,M10,1915.144,3.7452,Servicios profesionales
+2026-01,M10,1889.005,8.9267,Servicios profesionales
+2026-02,M10,1998.409,14.2898,Servicios profesionales
+2026-03,M10,1844.452,3.7515,Servicios profesionales
+2015-01,M11,1991.139,,"Gobierno, educación y salud"
+2015-02,M11,2168.275,,"Gobierno, educación y salud"
+2015-03,M11,2356.911,,"Gobierno, educación y salud"
+2015-04,M11,2371.369,,"Gobierno, educación y salud"
+2015-05,M11,2395.382,,"Gobierno, educación y salud"
+2015-06,M11,2493.1,,"Gobierno, educación y salud"
+2015-07,M11,2329.16,,"Gobierno, educación y salud"
+2015-08,M11,2440.221,,"Gobierno, educación y salud"
+2015-09,M11,2492.26,,"Gobierno, educación y salud"
+2015-10,M11,2518.187,,"Gobierno, educación y salud"
+2015-11,M11,2367.575,,"Gobierno, educación y salud"
+2015-12,M11,2234.033,,"Gobierno, educación y salud"
+2016-01,M11,2193.037,10.1398,"Gobierno, educación y salud"
+2016-02,M11,2347.501,8.2658,"Gobierno, educación y salud"
+2016-03,M11,2424.236,2.8565,"Gobierno, educación y salud"
+2016-04,M11,2419.392,2.0251,"Gobierno, educación y salud"
+2016-05,M11,2551.509,6.5178,"Gobierno, educación y salud"
+2016-06,M11,2532.489,1.5799,"Gobierno, educación y salud"
+2016-07,M11,2404.199,3.2217,"Gobierno, educación y salud"
+2016-08,M11,2438.603,-0.0663,"Gobierno, educación y salud"
+2016-09,M11,2541.778,1.9869,"Gobierno, educación y salud"
+2016-10,M11,2407.872,-4.3807,"Gobierno, educación y salud"
+2016-11,M11,2570.851,8.5858,"Gobierno, educación y salud"
+2016-12,M11,2366.974,5.9507,"Gobierno, educación y salud"
+2017-01,M11,2103.153,-4.0986,"Gobierno, educación y salud"
+2017-02,M11,2231.373,-4.9469,"Gobierno, educación y salud"
+2017-03,M11,2443.817,0.8077,"Gobierno, educación y salud"
+2017-04,M11,2534.357,4.7518,"Gobierno, educación y salud"
+2017-05,M11,2453.512,-3.8407,"Gobierno, educación y salud"
+2017-06,M11,2626.242,3.702,"Gobierno, educación y salud"
+2017-07,M11,2271.033,-5.5389,"Gobierno, educación y salud"
+2017-08,M11,2625.99,7.6842,"Gobierno, educación y salud"
+2017-09,M11,2567.161,0.9986,"Gobierno, educación y salud"
+2017-10,M11,2436.764,1.1999,"Gobierno, educación y salud"
+2017-11,M11,2445.564,-4.8734,"Gobierno, educación y salud"
+2017-12,M11,2230.049,-5.7848,"Gobierno, educación y salud"
+2018-01,M11,2075.432,-1.3181,"Gobierno, educación y salud"
+2018-02,M11,2293.35,2.7775,"Gobierno, educación y salud"
+2018-03,M11,2478.299,1.411,"Gobierno, educación y salud"
+2018-04,M11,2555.936,0.8515,"Gobierno, educación y salud"
+2018-05,M11,2543.834,3.6813,"Gobierno, educación y salud"
+2018-06,M11,2822.275,7.4644,"Gobierno, educación y salud"
+2018-07,M11,2488.737,9.5861,"Gobierno, educación y salud"
+2018-08,M11,2620.385,-0.2134,"Gobierno, educación y salud"
+2018-09,M11,2398.952,-6.5523,"Gobierno, educación y salud"
+2018-10,M11,2451.05,0.5863,"Gobierno, educación y salud"
+2018-11,M11,2444.325,-0.0507,"Gobierno, educación y salud"
+2018-12,M11,2413.104,8.2086,"Gobierno, educación y salud"
+2019-01,M11,2096.438,1.0121,"Gobierno, educación y salud"
+2019-02,M11,2427.395,5.8449,"Gobierno, educación y salud"
+2019-03,M11,2609.834,5.3075,"Gobierno, educación y salud"
+2019-04,M11,2506.797,-1.9225,"Gobierno, educación y salud"
+2019-05,M11,2672.931,5.0749,"Gobierno, educación y salud"
+2019-06,M11,2770.813,-1.8234,"Gobierno, educación y salud"
+2019-07,M11,2477.454,-0.4534,"Gobierno, educación y salud"
+2019-08,M11,2589.233,-1.1888,"Gobierno, educación y salud"
+2019-09,M11,2551.468,6.3576,"Gobierno, educación y salud"
+2019-10,M11,2505.801,2.2338,"Gobierno, educación y salud"
+2019-11,M11,2546.89,4.196,"Gobierno, educación y salud"
+2019-12,M11,2298.347,-4.7556,"Gobierno, educación y salud"
+2020-01,M11,2122.875,1.261,"Gobierno, educación y salud"
+2020-02,M11,2362.523,-2.6725,"Gobierno, educación y salud"
+2020-03,M11,2382.79,-8.6996,"Gobierno, educación y salud"
+2020-04,M11,2011.438,-19.7606,"Gobierno, educación y salud"
+2020-05,M11,2022.613,-24.3298,"Gobierno, educación y salud"
+2020-06,M11,2116.261,-23.6231,"Gobierno, educación y salud"
+2020-07,M11,1982.827,-19.9651,"Gobierno, educación y salud"
+2020-08,M11,2307.586,-10.8776,"Gobierno, educación y salud"
+2020-09,M11,2195.084,-13.9678,"Gobierno, educación y salud"
+2020-10,M11,2286.65,-8.7457,"Gobierno, educación y salud"
+2020-11,M11,2466.947,-3.1388,"Gobierno, educación y salud"
+2020-12,M11,2220.998,-3.3654,"Gobierno, educación y salud"
+2021-01,M11,2389.32,12.5511,"Gobierno, educación y salud"
+2021-02,M11,2635.745,11.5648,"Gobierno, educación y salud"
+2021-03,M11,2399.591,0.7051,"Gobierno, educación y salud"
+2021-04,M11,2596.145,29.0691,"Gobierno, educación y salud"
+2021-05,M11,2644.442,30.7438,"Gobierno, educación y salud"
+2021-06,M11,2414.258,14.0813,"Gobierno, educación y salud"
+2021-07,M11,2421.182,22.1076,"Gobierno, educación y salud"
+2021-08,M11,2468.93,6.9919,"Gobierno, educación y salud"
+2021-09,M11,2519.332,14.7716,"Gobierno, educación y salud"
+2021-10,M11,2477.923,8.3648,"Gobierno, educación y salud"
+2021-11,M11,2676.641,8.5001,"Gobierno, educación y salud"
+2021-12,M11,2448.182,10.2289,"Gobierno, educación y salud"
+2022-01,M11,2457.416,2.85,"Gobierno, educación y salud"
+2022-02,M11,2555.64,-3.0392,"Gobierno, educación y salud"
+2022-03,M11,2703.091,12.648,"Gobierno, educación y salud"
+2022-04,M11,2682.117,3.3115,"Gobierno, educación y salud"
+2022-05,M11,2855.068,7.9649,"Gobierno, educación y salud"
+2022-06,M11,2583.708,7.0187,"Gobierno, educación y salud"
+2022-07,M11,2693.475,11.2463,"Gobierno, educación y salud"
+2022-08,M11,2768.869,12.1485,"Gobierno, educación y salud"
+2022-09,M11,2618.138,3.9219,"Gobierno, educación y salud"
+2022-10,M11,2637.416,6.4366,"Gobierno, educación y salud"
+2022-11,M11,2774.825,3.6682,"Gobierno, educación y salud"
+2022-12,M11,2655.073,8.4508,"Gobierno, educación y salud"
+2023-01,M11,2243.759,-8.6944,"Gobierno, educación y salud"
+2023-02,M11,2545.83,-0.3839,"Gobierno, educación y salud"
+2023-03,M11,2888.507,6.8594,"Gobierno, educación y salud"
+2023-04,M11,2800.037,4.3965,"Gobierno, educación y salud"
+2023-05,M11,2720.757,-4.7043,"Gobierno, educación y salud"
+2023-06,M11,2853.1,10.4266,"Gobierno, educación y salud"
+2023-07,M11,2713.946,0.76,"Gobierno, educación y salud"
+2023-08,M11,2953.241,6.6587,"Gobierno, educación y salud"
+2023-09,M11,2854.458,9.0263,"Gobierno, educación y salud"
+2023-10,M11,2828.006,7.2264,"Gobierno, educación y salud"
+2023-11,M11,2784.385,0.3445,"Gobierno, educación y salud"
+2023-12,M11,2672.577,0.6593,"Gobierno, educación y salud"
+2024-01,M11,2417.832,7.7581,"Gobierno, educación y salud"
+2024-02,M11,2632.06,3.3871,"Gobierno, educación y salud"
+2024-03,M11,2811.593,-2.6628,"Gobierno, educación y salud"
+2024-04,M11,2848.784,1.7409,"Gobierno, educación y salud"
+2024-05,M11,2821.126,3.689,"Gobierno, educación y salud"
+2024-06,M11,2680.897,-6.0356,"Gobierno, educación y salud"
+2024-07,M11,2877.751,6.0357,"Gobierno, educación y salud"
+2024-08,M11,2879.727,-2.4893,"Gobierno, educación y salud"
+2024-09,M11,2809.251,-1.5837,"Gobierno, educación y salud"
+2024-10,M11,2721.968,-3.7496,"Gobierno, educación y salud"
+2024-11,M11,2971.903,6.7346,"Gobierno, educación y salud"
+2024-12,M11,2778.745,3.9725,"Gobierno, educación y salud"
+2025-01,M11,2557.062,5.7585,"Gobierno, educación y salud"
+2025-02,M11,2850.149,8.2859,"Gobierno, educación y salud"
+2025-03,M11,2659.004,-5.4271,"Gobierno, educación y salud"
+2025-04,M11,3084.254,8.2656,"Gobierno, educación y salud"
+2025-05,M11,2872.584,1.824,"Gobierno, educación y salud"
+2025-06,M11,2922.362,9.0069,"Gobierno, educación y salud"
+2025-07,M11,2824.353,-1.8555,"Gobierno, educación y salud"
+2025-08,M11,3026.964,5.1129,"Gobierno, educación y salud"
+2025-09,M11,2997.055,6.6852,"Gobierno, educación y salud"
+2025-10,M11,2893.639,6.3069,"Gobierno, educación y salud"
+2025-11,M11,3014.704,1.4402,"Gobierno, educación y salud"
+2025-12,M11,2899.854,4.3584,"Gobierno, educación y salud"
+2026-01,M11,2728.847,6.7181,"Gobierno, educación y salud"
+2026-02,M11,3094.129,8.5603,"Gobierno, educación y salud"
+2026-03,M11,3028.165,13.8834,"Gobierno, educación y salud"
+2015-01,M12,1854.097,,Arte y recreación
+2015-02,M12,1826.262,,Arte y recreación
+2015-03,M12,1892.394,,Arte y recreación
+2015-04,M12,1839.746,,Arte y recreación
+2015-05,M12,2123.474,,Arte y recreación
+2015-06,M12,1864.459,,Arte y recreación
+2015-07,M12,1955.569,,Arte y recreación
+2015-08,M12,1898.937,,Arte y recreación
+2015-09,M12,1884.49,,Arte y recreación
+2015-10,M12,2079.121,,Arte y recreación
+2015-11,M12,1853.408,,Arte y recreación
+2015-12,M12,1762.556,,Arte y recreación
+2016-01,M12,1841.341,-0.688,Arte y recreación
+2016-02,M12,1857.868,1.7306,Arte y recreación
+2016-03,M12,1851.893,-2.1402,Arte y recreación
+2016-04,M12,1849.366,0.5229,Arte y recreación
+2016-05,M12,1893.509,-10.8297,Arte y recreación
+2016-06,M12,1790.974,-3.9414,Arte y recreación
+2016-07,M12,1777.876,-9.0865,Arte y recreación
+2016-08,M12,1886.884,-0.6347,Arte y recreación
+2016-09,M12,1853.524,-1.6432,Arte y recreación
+2016-10,M12,1880.835,-9.537,Arte y recreación
+2016-11,M12,1839.064,-0.7739,Arte y recreación
+2016-12,M12,1953.588,10.8384,Arte y recreación
+2017-01,M12,1913.482,3.9179,Arte y recreación
+2017-02,M12,1842.608,-0.8214,Arte y recreación
+2017-03,M12,1824.879,-1.4587,Arte y recreación
+2017-04,M12,1847.316,-0.1108,Arte y recreación
+2017-05,M12,1806.933,-4.5723,Arte y recreación
+2017-06,M12,1963.419,9.6286,Arte y recreación
+2017-07,M12,1857.729,4.4915,Arte y recreación
+2017-08,M12,1797.959,-4.7128,Arte y recreación
+2017-09,M12,1884.09,1.6491,Arte y recreación
+2017-10,M12,1860.277,-1.093,Arte y recreación
+2017-11,M12,1851.429,0.6724,Arte y recreación
+2017-12,M12,1935.126,-0.945,Arte y recreación
+2018-01,M12,1878.502,-1.8281,Arte y recreación
+2018-02,M12,1738.352,-5.6581,Arte y recreación
+2018-03,M12,1892.377,3.6988,Arte y recreación
+2018-04,M12,1831.529,-0.8546,Arte y recreación
+2018-05,M12,1985.438,9.8789,Arte y recreación
+2018-06,M12,1903.535,-3.05,Arte y recreación
+2018-07,M12,1997.906,7.5456,Arte y recreación
+2018-08,M12,1896.468,5.4789,Arte y recreación
+2018-09,M12,1938.703,2.8986,Arte y recreación
+2018-10,M12,1855.142,-0.276,Arte y recreación
+2018-11,M12,1941.921,4.8877,Arte y recreación
+2018-12,M12,1957.059,1.1334,Arte y recreación
+2019-01,M12,2055.773,9.4368,Arte y recreación
+2019-02,M12,1943.016,11.7734,Arte y recreación
+2019-03,M12,2078.162,9.8175,Arte y recreación
+2019-04,M12,1945.301,6.2119,Arte y recreación
+2019-05,M12,1822.224,-8.2206,Arte y recreación
+2019-06,M12,2050.904,7.7419,Arte y recreación
+2019-07,M12,2041.698,2.1919,Arte y recreación
+2019-08,M12,1935.862,2.0772,Arte y recreación
+2019-09,M12,1862.341,-3.9388,Arte y recreación
+2019-10,M12,2037.419,9.8255,Arte y recreación
+2019-11,M12,1781.973,-8.2366,Arte y recreación
+2019-12,M12,1913.797,-2.2106,Arte y recreación
+2020-01,M12,2034.419,-1.0387,Arte y recreación
+2020-02,M12,1891.74,-2.639,Arte y recreación
+2020-03,M12,1626.82140477155,-21.7183,Arte y recreación
+2020-04,M12,1626.82140477155,-16.3717,Arte y recreación
+2020-05,M12,1626.82140477155,-10.7233,Arte y recreación
+2020-06,M12,1626.82140477155,-20.6778,Arte y recreación
+2020-07,M12,1626.82140477155,-20.3202,Arte y recreación
+2020-08,M12,1626.82140477155,-15.964,Arte y recreación
+2020-09,M12,1626.82140477155,-12.6464,Arte y recreación
+2020-10,M12,1847.012,-9.3455,Arte y recreación
+2020-11,M12,1626.82140477155,-8.7067,Arte y recreación
+2020-12,M12,1626.82140477155,-14.9951,Arte y recreación
+2021-01,M12,1626.82140477155,-20.0351,Arte y recreación
+2021-02,M12,1626.82140477155,-14.004,Arte y recreación
+2021-03,M12,1626.82140477155,0.0,Arte y recreación
+2021-04,M12,1626.82140477155,0.0,Arte y recreación
+2021-05,M12,1626.82140477155,0.0,Arte y recreación
+2021-06,M12,1626.82140477155,0.0,Arte y recreación
+2021-07,M12,1626.82140477155,0.0,Arte y recreación
+2021-08,M12,1629.965,0.1932,Arte y recreación
+2021-09,M12,1626.82140477155,0.0,Arte y recreación
+2021-10,M12,1653.121,-10.4975,Arte y recreación
+2021-11,M12,1677.887,3.139,Arte y recreación
+2021-12,M12,1779.695,9.3971,Arte y recreación
+2022-01,M12,1643.665,1.0354,Arte y recreación
+2022-02,M12,1838.844,13.0329,Arte y recreación
+2022-03,M12,1727.167,6.1682,Arte y recreación
+2022-04,M12,1789.769,10.0163,Arte y recreación
+2022-05,M12,1957.666,20.3369,Arte y recreación
+2022-06,M12,1927.525,18.4841,Arte y recreación
+2022-07,M12,1736.759,6.7578,Arte y recreación
+2022-08,M12,1832.637,12.4341,Arte y recreación
+2022-09,M12,1830.432,12.5159,Arte y recreación
+2022-10,M12,1930.012,16.7496,Arte y recreación
+2022-11,M12,2027.38,20.8294,Arte y recreación
+2022-12,M12,1974.908,10.9689,Arte y recreación
+2023-01,M12,1848.863,12.4842,Arte y recreación
+2023-02,M12,1863.203,1.3247,Arte y recreación
+2023-03,M12,1905.551,10.3281,Arte y recreación
+2023-04,M12,1848.003,3.2537,Arte y recreación
+2023-05,M12,1761.467,-10.0221,Arte y recreación
+2023-06,M12,2032.858,5.4647,Arte y recreación
+2023-07,M12,1954.4,12.5314,Arte y recreación
+2023-08,M12,1958.225,6.8529,Arte y recreación
+2023-09,M12,1986.406,8.5212,Arte y recreación
+2023-10,M12,1937.731,0.3999,Arte y recreación
+2023-11,M12,2040.023,0.6236,Arte y recreación
+2023-12,M12,1958.281,-0.8419,Arte y recreación
+2024-01,M12,1958.405,5.9248,Arte y recreación
+2024-02,M12,2004.094,7.5618,Arte y recreación
+2024-03,M12,1887.482,-0.9482,Arte y recreación
+2024-04,M12,1855.489,0.4051,Arte y recreación
+2024-05,M12,1992.181,13.0978,Arte y recreación
+2024-06,M12,1927.056,-5.2046,Arte y recreación
+2024-07,M12,1948.389,-0.3076,Arte y recreación
+2024-08,M12,2153.161,9.9547,Arte y recreación
+2024-09,M12,1997.25,0.5459,Arte y recreación
+2024-10,M12,2000.831,3.2564,Arte y recreación
+2024-11,M12,2077.966,1.8599,Arte y recreación
+2024-12,M12,2005.262,2.3991,Arte y recreación
+2025-01,M12,1981.464,1.1774,Arte y recreación
+2025-02,M12,1892.303,-5.5781,Arte y recreación
+2025-03,M12,1987.339,5.2905,Arte y recreación
+2025-04,M12,1891.03,1.9155,Arte y recreación
+2025-05,M12,1996.795,0.2316,Arte y recreación
+2025-06,M12,1858.792,-3.5424,Arte y recreación
+2025-07,M12,1981.455,1.6971,Arte y recreación
+2025-08,M12,2096.637,-2.6252,Arte y recreación
+2025-09,M12,2006.617,0.469,Arte y recreación
+2025-10,M12,1928.317,-3.6242,Arte y recreación
+2025-11,M12,2157.957,3.8495,Arte y recreación
+2025-12,M12,2119.538,5.6988,Arte y recreación
+2026-01,M12,1940.928,-2.0458,Arte y recreación
+2026-02,M12,2080.624,9.9519,Arte y recreación
+2026-03,M12,2026.905,1.9909,Arte y recreación

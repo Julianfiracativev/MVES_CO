@@ -1,0 +1,30 @@
+{
+  "metodo": "5D PCA originales + IPC divisional + EOE M03/M06",
+  "exclusiones": "2020+2021 (COVID crash)",
+  "geih_homologacion": {
+    "M01": "Agricultura, ganadería, caza, silvicultura y pesca",
+    "M02": "Suministro de electricidad, gas, agua (proxy — DANE agrupa Minería con Energía)",
+    "M03": "Industrias manufactureras",
+    "M04": "Suministro de electricidad, gas, agua (mismo proxy que M02)",
+    "M05": "Construcción",
+    "M06": "Comercio + Alojamiento + Transporte y almacenamiento",
+    "M07": "Información y comunicaciones (rolling 3m)",
+    "M08": "Actividades financieras y de seguros",
+    "M09": "Actividades inmobiliarias",
+    "M10": "Actividades profesionales, científicas, técnicas",
+    "M11": "Administración pública, defensa, educación y salud",
+    "M12": "Actividades artísticas, entretenimiento y recreación"
+  },
+  "fuentes_costo": {
+    "M01-03": "IPP DANE",
+    "M04,M09": "IPC Alojamiento",
+    "M05": "IPC Muebles",
+    "M06": "IPC Transporte",
+    "M07": "IPC Info y Comunicación",
+    "M11": "IPC Educación",
+    "M12": "IPC Recreación",
+    "M08,M10": "IPC Nacional"
+  },
+  "tpm_datos": "Real BanRep (Tasa_de_politicamonteraria.xlsx) — sin forward-fill",
+  "geih_nota": "M02+M04 comparten fila GEIH Suministro electricidad, gas, agua (proxy minería)"
+}
