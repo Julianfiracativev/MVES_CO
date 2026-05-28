@@ -33,6 +33,25 @@ st.markdown("""<style>
 .stMetric label{font-size:12px!important}
 </style>""", unsafe_allow_html=True)
 
+
+def hex_to_rgba(hex_color, alpha=0.6):
+    """Convierte colores HEX (#RRGGBB) a rgba válido para Plotly."""
+    try:
+        h = str(hex_color).strip().lstrip("#")
+        if len(h) != 6:
+            return "rgba(136,136,136,{})".format(alpha)
+        r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        return f"rgba({r},{g},{b},{alpha})"
+    except Exception:
+        return "rgba(136,136,136,{})".format(alpha)
+
+def mkp_get(key, default="N/D"):
+    """Obtiene parámetros de Markov sin romper la app si falta una llave."""
+    try:
+        return mkp.get(key, default) if isinstance(mkp, dict) else default
+    except Exception:
+        return default
+
 # Cargar datos
 @st.cache_data
 def get_data():
@@ -51,8 +70,8 @@ ult_mes       = D['ultimo_mes']
 icds_agg_ult  = D['icds_agg_actual']
 reg_ult       = D['regimen_icds']
 ult_sectores  = D['ultimo']
-mk_alerta     = mkp['alerta_actual']
-mk_prob       = mkp['prob_crisis_actual']
+mk_alerta     = mkp_get('alerta_actual', 'VERDE')
+mk_prob       = float(mkp_get('prob_crisis_actual', 0) or 0)
 
 with st.sidebar:
     st.markdown("## 🔔 MVES-CO")
@@ -167,8 +186,8 @@ elif pagina == "📈 Sectores ICDS / ICDS*":
         fig2.add_trace(go.Bar(y=labels2,x=v_icds,orientation="h",name="ICDS",
                                marker_color="rgba(55,138,221,.4)",marker_line_color="#378ADD",marker_line_width=1))
         fig2.add_trace(go.Bar(y=labels2,x=v_star,orientation="h",name="ICDS*",
-                               marker_color=colors2,
-                               marker_line_color="#444",marker_line_width=1.0))
+                               marker_color=[hex_to_rgba(c, 0.60) for c in colors2],
+                               marker_line_color=colors2,marker_line_width=1.5))
         for x in [0.40,0.60]:
             fig2.add_vline(x=x,line_dash="dot",line_color="gray",opacity=0.4)
         fig2.update_layout(barmode="overlay",height=430,
@@ -238,25 +257,14 @@ elif pagina == "⏱ Evolución temporal":
 # ═══════════════════════════════ MARKOV ═══════════════════════════
 elif pagina == "🔄 Markov — Riesgo financiero":
     st.title("🔄 Modelo Markov-Switching — Riesgo Financiero Sistémico")
-    st.caption("Estimado sobre Score_Riesgo = TRM + TPM + Volatilidades | statsmodels.MarkovRegression | 2 regímenes")
-
-    # Parámetros seguros del modelo Markov
-    periodo_min = mkp.get("periodo_min", str(pd.to_datetime(df_mk["Periodo"]).min().to_period("M")) if "Periodo" in df_mk.columns and len(df_mk) else "N/D")
-    periodo_max = mkp.get("periodo_max", str(pd.to_datetime(df_mk["Periodo"]).max().to_period("M")) if "Periodo" in df_mk.columns and len(df_mk) else "N/D")
-    n_obs = mkp.get("n_obs", len(df_mk))
-    aic = mkp.get("aic", "N/D")
-    llf = mkp.get("llf", "N/D")
-    prob_crisis_actual = mkp.get("prob_crisis_actual", float(df_mk["Prob_Crisis"].iloc[-1]) if "Prob_Crisis" in df_mk.columns and len(df_mk) else 0)
-    alerta_actual = mkp.get("alerta_actual", "N/D")
-    n_rojas = mkp.get("n_rojas", int((df_mk["Prob_Crisis"] >= 0.70).sum()) if "Prob_Crisis" in df_mk.columns else 0)
-    covid_p_crisis = mkp.get("covid_p_crisis", 0)
+    st.caption("MarkovAutoregression AR(1) sobre ICDS* sistémico | switching_ar=True | 2 regímenes | statsmodels | 50 semillas")
 
     # Métricas Markov
     c1,c2,c3,c4 = st.columns(4)
-    c1.metric("P(Crisis) actual", f"{prob_crisis_actual*100:.1f}%")
-    c2.metric("Alerta actual", alerta_actual)
-    c3.metric("Alertas ROJAS (históricas)", n_rojas)
-    c4.metric("Validación COVID", f"{covid_p_crisis*100:.1f}%",
+    c1.metric("P(Crisis) actual", f"{float(mkp_get('prob_crisis_actual', 0) or 0)*100:.1f}%")
+    c2.metric("Alerta actual", mkp_get('alerta_actual', 'VERDE'))
+    c3.metric("Alertas ROJAS (históricas)", mkp_get('n_rojas', 0))
+    c4.metric("Validación COVID", f"{float(mkp_get('covid_p_crisis', 0) or 0)*100:.1f}%",
               help="P(Crisis) promedio durante mar-sep 2020")
 
     st.divider()
@@ -306,22 +314,21 @@ elif pagina == "🔄 Markov — Riesgo financiero":
         | Parámetro | Valor |
         |-----------|-------|
         | Regímenes (k) | 2 (Calma / Crisis) |
-        | Observaciones | {n_obs} meses |
-        | Período | {periodo_min} — {periodo_max} |
-        | AIC | {aic} |
-        | Log-likelihood | {llf} |
-        | Variable | Score_Riesgo (TRM + TPM + Volatilidades) |
-        | Implementación | statsmodels.MarkovRegression |
+        | Observaciones | {mkp_get('n_obs')} meses |
+        | Período | {mkp_get('periodo_min', df_mk['Periodo'].min() if 'Periodo' in df_mk.columns else 'N/D')} — {mkp_get('periodo_max', df_mk['Periodo'].max() if 'Periodo' in df_mk.columns else 'N/D')} |
+        | AIC | {mkp_get('aic')} |
+        | Log-likelihood | {mkp_get('llf')} |
+        | Variable | ICDS* sistémico agregado (ponderado PIB) |
+        | Implementación | statsmodels.MarkovAutoregression |
         """)
         st.subheader("Validación")
+        covid_p_crisis = float(mkp_get('covid_p_crisis', 0) or 0)
         cov_ok = covid_p_crisis > 0.60
-        covid_p_crisis = mkp.get("covid_p_crisis", 0)
-        cov_ok = covid_p_crisis > 0.60
-
         if cov_ok:
             st.success(f"✓ COVID-19 detectado: P(crisis) = {covid_p_crisis*100:.1f}% (mar-sep 2020)")
         else:
             st.warning("⚠ Revisar detección COVID")
+
     with col2:
         st.subheader("TRM y tasa de política")
         fig_trm = go.Figure()
@@ -341,7 +348,7 @@ elif pagina == "🔄 Markov — Riesgo financiero":
 # ═══════════════════════════════ MIP ══════════════════════════════
 elif pagina == "🔗 Red de contagio MIP":
     st.title("🔗 Red de Contagio — Matriz Insumo-Producto")
-    st.caption("Inversa de Leontief L = (I-A)⁻¹ | DANE MIP 2019-2021 | 12 macrosectores")
+    st.caption("Inversa de Leontief L = (I-A)⁻¹ | DANE MIP 2021 | 12 macrosectores")
 
     col1,col2 = st.columns([1.1,0.9])
     with col1:
@@ -441,19 +448,21 @@ El sistema combina **tres capas analíticas** que responden al objetivo de su su
 
 ---
 
-### Capa 1 — ICDS: Índice Compuesto de Desempeño Sectorial
+### Capa 1 — ICDS: Índice de Condiciones por Dimensión Sectorial
 
-$$ICDS_i = 0.35 \\cdot ISE_{{norm}} + 0.20 \\cdot EMP_{{norm}} + 0.15 \\cdot COSTO_{{norm}} + 0.10 \\cdot TPM_{{norm}} + 0.20 \\cdot TRM_{{norm}}$$
+$$ICDS_i = \\sum_d \\frac{{w_d \\cdot norm_{{d,i}}}}{{\\sum_d w_d}}$$
 
-| Dimensión | Variable | Peso | Fuente |
-|-----------|----------|------|--------|
-| ΔActividad | ISE DANE | 35% | ISE 12 actividades (hasta feb 2026) |
-| ΔEmpleo | GEIH | 20% | Ocupados por rama (hasta abr 2026) |
-| Costos | IPP / IPC | 15% | DANE (hasta mar/abr 2026) |
-| Condiciones crediticias | TPM | 10% | BanRep (hasta ene 2024, ffill) |
-| Tipo de cambio | TRM | 20% | BanRep diaria (hasta abr 2026) |
+**Pesos obtenidos por Análisis de Componentes Principales (ACP) — cargas absolutas PC1:**
 
-**Normalización:** Probability Integral Transform (PIT), excluyendo COVID+rebote 2020-2021.
+| Dimensión | Variable | Peso ACP | Fuente |
+|-----------|----------|----------|--------|
+| Tasa de política monetaria (inv) | TPM | **35,26%** | BanRep — real hasta abr 2026 |
+| Variación de costos sectoriales (inv) | IPP / IPC | **32,83%** | DANE — hasta abr 2026 |
+| Actividad económica | ISE | **13,57%** | DANE — hasta mar 2026 |
+| Variación de empleo | GEIH | **12,95%** | DANE — hasta mar 2026 |
+| Tipo de cambio ajustado sectorial | TRM | **5,39%** | BanRep — hasta abr 2026 |
+
+**Normalización:** Probability Integral Transform (PIT) histórica, excluyendo 2020–2021 (COVID crash).
 
 ---
 
@@ -461,20 +470,22 @@ $$ICDS_i = 0.35 \\cdot ISE_{{norm}} + 0.20 \\cdot EMP_{{norm}} + 0.15 \\cdot COS
 
 $$ICDS^*_i = ICDS_i - 0.5 \\sum_j A_{{ji}} \\cdot \\max(0,\\ 0.5 - ICDS_j)$$
 
-**Fuentes:** MIP DANE 2019 (40%) + 2021 (60%).
+**Fuente:** MIP DANE 2021. M02 (Minería) y M04 (Electricidad) comparten proxy GEIH.
 
 ---
 
-### Capa 3 — Markov-Switching: Detección de régimen financiero
+### Capa 3 — Markov-Switching AR(1): Detección de régimen sistémico
 
-$$Score_{{Riesgo,t}} = f(TRM_t, TPM_t, \\sigma_{{TRM}}, \\sigma_{{TPM}})$$
+$$ICDS^*_t = \\mu_{{s_t}} + \\phi_{{s_t}} \\cdot ICDS^*_{{t-1}} + \\sigma \\cdot \\varepsilon_t, \\quad s_t \\sim Markov(P)$$
 
 $$P(s_t = j \\mid s_{{t-1}} = i) = p_{{ij}}$$
 
-- **2 regímenes:** Calma / Crisis
-- **Estimación:** statsmodels.MarkovRegression (MLE)
-- **Validación:** COVID-19 detectado con P(crisis) = {mkp.get('covid_p_crisis', 0)*100:.1f}% (mar-sep 2020)
-- **AIC:** {mkp.get('aic', 'N/D')} | **Log-likelihood:** {mkp.get('llf', 'N/D')}
+- **Variable de entrada:** ICDS* sistémico agregado (ponderado por PIB)
+- **2 regímenes no observados:** R1 Expansión (≥ 0,60) / R2 Estabilidad (0,40–0,60)
+- **Especificación:** switching_ar = True (φ cambia por régimen), switching_variance = False
+- **Estimación:** statsmodels.MarkovAutoregression — búsqueda con 50 semillas aleatorias
+- **Validación:** COVID-19 detectado con P(crisis) = {float(mkp_get('covid_p_crisis', 0) or 0)*100:.1f}% (mar-sep 2020)
+- **AIC:** {mkp_get('aic')} | **Log-likelihood:** {mkp_get('llf')}
 
 ---
 
@@ -494,16 +505,16 @@ $$P(s_t = j \\mid s_{{t-1}} = i) = p_{{ij}}$$
 | DANE — GEIH Ocupados | ΔEmpleo | Abr 2026 |
 | DANE — IPP Producción | ΔCostos | Mar 2026 |
 | BanRep — IPC | Inflación | Mar 2026 |
-| BanRep — TPM | Tasa política | Ene 2024* |
+| BanRep — TPM | Tasa política | Abr 2026 |
 | BanRep — TRM | Tipo de cambio | Abr 2026 |
-| DANE — MIP 2019-2021 | Coef. Leontief | Anual |""")
-        st.caption("*TPM forward-filled. Trabajo futuro: actualizar hasta 2026.")
+| DANE — MIP 2021 | Coef. Leontief | Anual |""")
+        st.caption("TPM real BanRep hasta abril 2026 (Tasa_de_politicamonteraria.xlsx). MIP DANE 2021 (última disponible).")
     with col2:
         st.subheader("Limitaciones reconocidas")
         st.markdown("""
-- MIP estática (2019, 2021): no captura cambios estructurales post-COVID
-- TPM solo hasta ene 2024 (forward-filled para meses posteriores)
-- Pesos del ICDS por juicio experto (calibración AHP = trabajo futuro)
-- Markov por umbrales en ICDS*; MarkovRegression solo en Score_Riesgo financiero
-- Agregación 68 productos CPC → 12 macrosectores pierde heterogeneidad interna
+- MIP estática (2021): no captura cambios estructurales post-COVID; próxima actualización DANE pendiente
+- M02 (Minería) y M04 (Electricidad) comparten fila GEIH "Suministro electricidad, gas, agua" como proxy
+- ISE disponible con rezago de un mes; se aplica forward-fill de un período para el mes de cierre
+- El Markov AR(1) opera sobre ICDS* agregado; no captura heterogeneidad intra-régimen
+- Agregación a 12 macrosectores reduce heterogeneidad interna de sectores compuestos
 """)
