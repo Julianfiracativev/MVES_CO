@@ -1,0 +1,8 @@
+1. Reemplaza app.py del repositorio por este app.py.
+2. Copia datos/base_dane_limpia.xlsx dentro de la carpeta datos del repositorio.
+3. Verifica que requirements.txt y runtime.txt queden en la raíz.
+4. Ejecuta:
+   git add .
+   git commit -m "Actualizar base DANE y dashboard MVES"
+   git push origin main
+5. En Streamlit Cloud: Manage app -> Reboot app.
