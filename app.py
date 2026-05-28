@@ -15,9 +15,9 @@ import json
 from pathlib import Path
 from mves_data import (
     MACROS, MACROS_LIST, COLORES_ESTADO, NOMBRES_ESTADO,
-    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB, EXCLUIR_COVID,
+    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB,
     cargar_panel, cargar_leontief, calcular_icds_star,
-    calcular_serie_agregada, calcular_transicion, simular_choque, ejecutar_modelo_leontief_nuevo, calcular_resumen_markov,
+    calcular_serie_agregada, calcular_transicion, simular_choque
 )
 
 def hex_to_rgba(hex_color, alpha=1.0):
