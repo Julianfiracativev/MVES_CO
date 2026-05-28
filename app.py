@@ -485,11 +485,11 @@ elif pagina == "🔄 Regímenes Markov":
         fig.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="Score")
         st.plotly_chart(fig, use_container_width=True)
 
-    with col2:
-        st.subheader("Matriz de transición")
-        fig_h = px.imshow(P_df, text_auto=".2%", aspect="auto", color_continuous_scale="Blues")
-        fig_h.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10))
-        st.plotly_chart(fig_h, use_container_width=True)
+   ### with col2:
+      ###  st.subheader("Matriz de transición")
+        ###fig_h = px.imshow(P_df, text_auto=".2%", aspect="auto", color_continuous_scale="Blues")
+        ###fig_h.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10))
+        ###st.plotly_chart(fig_h, use_container_width=True)
 
 
 elif pagina == "🔗 Contagio MIP":
