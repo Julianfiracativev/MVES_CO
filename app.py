@@ -13,11 +13,12 @@ from plotly.subplots import make_subplots
 import networkx as nx
 import json
 from pathlib import Path
+import networkx as nx
 from mves_data import (
     MACROS, MACROS_LIST, COLORES_ESTADO, NOMBRES_ESTADO,
-    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB,
+    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB, EXCLUIR_COVID,
     cargar_panel, cargar_leontief, calcular_icds_star,
-    calcular_serie_agregada, calcular_transicion, simular_choque
+    calcular_serie_agregada, calcular_transicion, simular_choque, ejecutar_modelo_leontief_nuevo, calcular_resumen_markov,
 )
 
 def hex_to_rgba(hex_color, alpha=1.0):
@@ -32,13 +33,6 @@ def hex_to_rgba(hex_color, alpha=1.0):
     b = int(h[4:6], 16)
     return f"rgba({r},{g},{b},{alpha})"
 
-
-def safe_get(dic, key, default=None):
-    """Lectura segura para diccionarios de parámetros/resúmenes."""
-    try:
-        return dic.get(key, default) if hasattr(dic, "get") else default
-    except Exception:
-        return default
 
 # ── Configuración de página ─────────────────────────────────────────────────
 st.set_page_config(
@@ -109,7 +103,7 @@ with st.sidebar:
     ])
     st.markdown("---")
     st.markdown(f"**Último mes:** `{ult_mes}`")
-    st.markdown(f"**Régimen actual:** {NOMBRES_REGIMEN.get(ultimo_r, ultimo_r)}")
+    st.markdown(f"**Régimen actual:** {NOMBRES_REGIMEN[ultimo_r]}")
     nivel_color = {"BAJO": "🟢", "MEDIO": "🟡", "ALTO": "🔴"}
     st.markdown(f"**Alerta:** {nivel_color[nivel_alerta]} {nivel_alerta}")
     st.markdown("---")
@@ -226,7 +220,7 @@ elif pagina == "📈 Sectores — ICDS / ICDS*":
 
         st.dataframe(
             df_tabla.style
-            .map(color_estado, subset=["Estado ICDS", "Estado ICDS*"])
+            .applymap(color_estado, subset=["Estado ICDS", "Estado ICDS*"])
             .background_gradient(subset=["ICDS", "ICDS*"], cmap="RdYlGn", vmin=0, vmax=1)
             .format({"ICDS": "{:.4f}", "ICDS*": "{:.4f}", "Ajuste MIP": "{:.4f}"}),
             use_container_width=True, height=450,
@@ -448,7 +442,7 @@ elif pagina == "🔄 Regímenes Markov":
                 unsafe_allow_html=True,
             )
         st.markdown("---")
-        st.markdown(f"**Régimen actual:** {NOMBRES_REGIMEN.get(ultimo_r, ultimo_r)}")
+        st.markdown(f"**Régimen actual:** {NOMBRES_REGIMEN[ultimo_r]}")
         st.markdown(f"**P(contracción t+1):** {alerta_1:.1f}%")
         st.markdown(f"**P(contracción t+2):** {alerta_2:.1f}%")
         nivel_color = {"BAJO": "🟢", "MEDIO": "🟡", "ALTO": "🔴"}
@@ -893,9 +887,7 @@ elif pagina == "🔗 Contagio MIP":
                         "Impacto estimado (%)": coef * shock
                     })
 
-            df_impactos = pd.DataFrame(impactos)
-            if not df_impactos.empty:
-                df_impactos = df_impactos.sort_values("Impacto estimado (%)", ascending=False)
+            df_impactos = pd.DataFrame(impactos).sort_values("Impacto estimado (%)", ascending=False)
 
             if df_impactos.empty:
                 st.info("Con el sector seleccionado no se detectan vínculos directos relevantes en la matriz.")
@@ -1090,17 +1082,10 @@ elif pagina == "💥 Simulador de choque":
     resultado["Alerta"] = resultado["caida"].apply(
         lambda v: "⚠️ CONTAGIO" if v > 0.02 else ("🔴 EPICENTRO" if v == resultado["caida"].max() else "—")
     )
-    resultado_mostrar = resultado.rename(columns={
-        "macrosector_id": "ID",
-        "macrosector": "Sector",
-        "icds_base": "ICDS base",
-        "icds_shock": "ICDS shock",
-        "caida": "Caída",
-    })
-    columnas_impacto = [c for c in ["Sector", "ICDS base", "ICDS shock", "Caída", "Alerta"] if c in resultado_mostrar.columns]
+    resultado.columns = ["ID", "Sector", "ICDS base", "ICDS shock", "Caída", "Alerta"]
     st.dataframe(
-        resultado_mostrar[columnas_impacto]
-        .style.background_gradient(subset=["Caída"] if "Caída" in columnas_impacto else None, cmap="Reds")
+        resultado[["Sector", "ICDS base", "ICDS shock", "Caída", "Alerta"]]
+        .style.background_gradient(subset=["Caída"], cmap="Reds")
         .format({"ICDS base": "{:.4f}", "ICDS shock": "{:.4f}", "Caída": "{:.4f}"}),
         use_container_width=True, hide_index=True,
     )
