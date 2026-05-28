@@ -471,45 +471,7 @@ elif pagina == "🔄 Regímenes Markov":
     c2.metric("Último periodo", resumen_mk["ultimo_periodo"].strftime("%Y-%m") if pd.notna(resumen_mk["ultimo_periodo"]) else "N/A")
     c3.metric("Régimen actual", nombre_reg)
     c4.metric("Prob. alerta roja t+1", f'{resumen_mk["prob_roja_t1"]:.1f}%')
-st.divider()
 
-st.subheader("Evolución del Score de Riesgo")
-
-fig = go.Figure()
-
-fig.add_trace(go.Scatter(
-    x=df_mk["Periodo"],
-    y=df_mk["Score_Riesgo"],
-    mode="lines",
-    name="Score_Riesgo"
-))
-
-rojas = df_mk[df_mk["Riesgo_Label"] == 2]
-amarillas = df_mk[df_mk["Riesgo_Label"] == 1]
-
-fig.add_trace(go.Scatter(
-    x=rojas["Periodo"],
-    y=rojas["Score_Riesgo"],
-    mode="markers",
-    name="Alerta roja",
-    marker=dict(size=8, color="#E24B4A")
-))
-
-fig.add_trace(go.Scatter(
-    x=amarillas["Periodo"],
-    y=amarillas["Score_Riesgo"],
-    mode="markers",
-    name="Alerta amarilla",
-    marker=dict(size=7, color="#BA7517")
-))
-
-fig.update_layout(
-    height=520,
-    margin=dict(l=10, r=10, t=10, b=10),
-    yaxis_title="Score"
-)
-
-st.plotly_chart(fig, use_container_width=True)
 
    ### with col2:
       ###  st.subheader("Matriz de transición")
@@ -518,7 +480,7 @@ st.plotly_chart(fig, use_container_width=True)
         ###st.plotly_chart(fig_h, use_container_width=True)
 
 
-if pagina == "🔗 Contagio MIP":
+elif pagina == "🔗 Contagio MIP":
     st.title("Contagio Intersectorial — Matriz Insumo-Producto")
     st.markdown("Vista organizada del modelo Leontief, dependencias productivas y contagio sectorial.")
 
