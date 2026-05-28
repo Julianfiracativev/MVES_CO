@@ -518,7 +518,7 @@ st.plotly_chart(fig, use_container_width=True)
         ###st.plotly_chart(fig_h, use_container_width=True)
 
 
-elif pagina == "🔗 Contagio MIP":
+if pagina == "🔗 Contagio MIP":
     st.title("Contagio Intersectorial — Matriz Insumo-Producto")
     st.markdown("Vista organizada del modelo Leontief, dependencias productivas y contagio sectorial.")
 
