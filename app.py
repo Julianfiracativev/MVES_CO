@@ -13,13 +13,238 @@ from plotly.subplots import make_subplots
 import networkx as nx
 import json
 from pathlib import Path
-from mves_data import (
-    MACROS, MACROS_LIST, COLORES_ESTADO, NOMBRES_ESTADO,
-    COLORES_REGIMEN, NOMBRES_REGIMEN, COLORES_ALERTA, PESOS_PIB,
-    cargar_dashboard_data, cargar_panel, cargar_icds_star,
-    cargar_icds_agg, cargar_markov, cargar_markov_params,
-    cargar_leontief, simular_choque,
-)
+import mves_data as md
+
+# ── Compatibilidad con distintas versiones de mves_data.py ──────────────────
+MACROS = getattr(md, "MACROS", {
+    "M01":"Agropecuario","M02":"Minería y energía","M03":"Manufactura","M04":"Electricidad y agua",
+    "M05":"Construcción","M06":"Comercio, transporte y turismo","M07":"TIC y economía digital",
+    "M08":"Financiero y seguros","M09":"Inmobiliario","M10":"Servicios profesionales",
+    "M11":"Gobierno, educación y salud","M12":"Arte y recreación"
+})
+MACROS_LIST = getattr(md, "MACROS_LIST", list(MACROS.keys()))
+
+COLORES_ESTADO = getattr(md, "COLORES_ESTADO", {
+    "S1":"#639922","S2":"#1D9E75","S3":"#378ADD","S4":"#BA7517","S5":"#E24B4A"
+})
+NOMBRES_ESTADO = getattr(md, "NOMBRES_ESTADO", {
+    "S1":"Aceleración","S2":"Crecimiento","S3":"Estabilidad","S4":"Decrecimiento","S5":"Contracción"
+})
+COLORES_REGIMEN = getattr(md, "COLORES_REGIMEN", {0:"#639922",1:"#378ADD",2:"#E24B4A"})
+NOMBRES_REGIMEN = getattr(md, "NOMBRES_REGIMEN", {0:"R1 Expansión",1:"R2 Estabilidad",2:"R3 Contracción"})
+COLORES_ALERTA = getattr(md, "COLORES_ALERTA", {"VERDE":"#639922","AMARILLA":"#BA7517","ROJA":"#E24B4A"})
+PESOS_PIB = getattr(md, "PESOS_PIB", {m: 1/len(MACROS_LIST) for m in MACROS_LIST})
+
+def hex_to_rgba(hex_color, alpha=1.0):
+    """Convierte #RRGGBB a rgba(r,g,b,a) para evitar colores HEX de 8 dígitos inválidos en Plotly."""
+    if not isinstance(hex_color, str):
+        return f"rgba(136,136,136,{alpha})"
+    h = hex_color.strip().lstrip("#")
+    if len(h) != 6:
+        return hex_color
+    try:
+        r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+        return f"rgba({r},{g},{b},{alpha})"
+    except Exception:
+        return f"rgba(136,136,136,{alpha})"
+
+def _read_first_csv(paths):
+    for p in paths:
+        path = Path(p)
+        if path.exists():
+            return pd.read_csv(path)
+    return pd.DataFrame()
+
+def cargar_panel():
+    if hasattr(md, "cargar_panel"):
+        return md.cargar_panel()
+    return _read_first_csv(["datos/panel_mves.csv", "datos/panel.csv"])
+
+def cargar_leontief():
+    if hasattr(md, "cargar_leontief"):
+        return md.cargar_leontief()
+    I = pd.DataFrame(np.eye(len(MACROS_LIST)), index=MACROS_LIST, columns=MACROS_LIST)
+    A = pd.DataFrame(np.zeros((len(MACROS_LIST), len(MACROS_LIST))), index=MACROS_LIST, columns=MACROS_LIST)
+    return I, A
+
+def cargar_icds_star():
+    if hasattr(md, "cargar_icds_star"):
+        return md.cargar_icds_star()
+    if hasattr(md, "calcular_icds_star"):
+        panel = cargar_panel()
+        _, A = cargar_leontief()
+        return md.calcular_icds_star(panel, A)
+    return _read_first_csv([
+        "datos/resultados_icds_star.csv",
+        "datos/icds_star_final.csv",
+        "datos/icds_star.csv"
+    ])
+
+def cargar_icds_agg():
+    if hasattr(md, "cargar_icds_agg"):
+        return md.cargar_icds_agg()
+    if hasattr(md, "calcular_serie_agregada"):
+        return md.calcular_serie_agregada(cargar_icds_star())
+    df = cargar_icds_star()
+    if df.empty or "fecha" not in df.columns:
+        return pd.DataFrame()
+    val_col = "icds_star" if "icds_star" in df.columns else "ICDS*"
+    out = df.groupby("fecha", as_index=False)[val_col].mean().rename(columns={val_col:"icds_agg"})
+    out["regimen"] = np.select([out["icds_agg"] >= 0.60, out["icds_agg"] < 0.40], [0,2], default=1)
+    return out
+
+def cargar_markov():
+    if hasattr(md, "cargar_markov"):
+        df = md.cargar_markov()
+    else:
+        df = _read_first_csv([
+            "datos/markov_resultados.csv",
+            "datos/dataset_final_modelo_markov_switching.csv"
+        ])
+
+    if df.empty:
+        return pd.DataFrame({
+            "Periodo": [], "Prob_Crisis": [], "Score_Riesgo": [], "Alerta": [],
+            "TRM": [], "Tasa": []
+        })
+
+    if "Periodo" not in df.columns:
+        for c in ["fecha", "periodo", "Fecha"]:
+            if c in df.columns:
+                df["Periodo"] = df[c]
+                break
+
+    if "Score_Riesgo" not in df.columns:
+        for c in ["score_riesgo", "Score", "score"]:
+            if c in df.columns:
+                df["Score_Riesgo"] = df[c]
+                break
+
+    if "Prob_Crisis" not in df.columns:
+        if "Riesgo_Label" in df.columns:
+            df["Prob_Crisis"] = df["Riesgo_Label"].map({0:0.10, 1:0.50, 2:0.90}).fillna(0.10)
+        elif "Score_Riesgo" in df.columns and df["Score_Riesgo"].notna().any():
+            s = df["Score_Riesgo"].astype(float)
+            df["Prob_Crisis"] = (s - s.min()) / (s.max() - s.min() if s.max() != s.min() else 1)
+        else:
+            df["Prob_Crisis"] = 0.0
+
+    if "Alerta" not in df.columns:
+        df["Alerta"] = np.where(df["Prob_Crisis"] >= 0.70, "ROJA",
+                         np.where(df["Prob_Crisis"] >= 0.40, "AMARILLA", "VERDE"))
+
+    if "TRM" not in df.columns:
+        df["TRM"] = np.nan
+    if "Tasa" not in df.columns:
+        for c in ["TPM", "tpm", "Tasa_Politica", "Tasa_de_politica"]:
+            if c in df.columns:
+                df["Tasa"] = df[c]
+                break
+        if "Tasa" not in df.columns:
+            df["Tasa"] = np.nan
+
+    return df
+
+def cargar_markov_params():
+    base = md.cargar_markov_params() if hasattr(md, "cargar_markov_params") else {}
+    df = cargar_markov()
+    if df.empty:
+        defaults = {
+            "alerta_actual":"VERDE","prob_crisis_actual":0.0,"n_rojas":0,"covid_p_crisis":0.0,
+            "n_obs":0,"periodo_min":"N/D","periodo_max":"N/D","aic":"N/D","llf":"N/D"
+        }
+        defaults.update(base if isinstance(base, dict) else {})
+        return defaults
+
+    prob = float(df["Prob_Crisis"].iloc[-1]) if "Prob_Crisis" in df.columns else 0.0
+    alerta = "ROJA" if prob >= 0.70 else "AMARILLA" if prob >= 0.40 else "VERDE"
+    periodo_min = str(df["Periodo"].min())[:10] if "Periodo" in df.columns else "N/D"
+    periodo_max = str(df["Periodo"].max())[:10] if "Periodo" in df.columns else "N/D"
+
+    defaults = {
+        "alerta_actual": alerta,
+        "prob_crisis_actual": prob,
+        "n_rojas": int((df.get("Alerta", pd.Series(dtype=str)) == "ROJA").sum()),
+        "covid_p_crisis": float(df.loc[df["Periodo"].astype(str).between("2020-03", "2020-09"), "Prob_Crisis"].mean())
+                           if "Periodo" in df.columns else 0.0,
+        "n_obs": len(df),
+        "periodo_min": periodo_min,
+        "periodo_max": periodo_max,
+        "aic": "N/D",
+        "llf": "N/D"
+    }
+    if pd.isna(defaults["covid_p_crisis"]):
+        defaults["covid_p_crisis"] = 0.0
+    if isinstance(base, dict):
+        defaults.update(base)
+        # Reponer llaves que a veces faltan en el JSON
+        for k, v in list(defaults.items()):
+            if v is None or (isinstance(v, float) and pd.isna(v)):
+                defaults[k] = "N/D"
+    return defaults
+
+def cargar_dashboard_data():
+    if hasattr(md, "cargar_dashboard_data"):
+        return md.cargar_dashboard_data()
+
+    df = cargar_icds_star()
+    L, _ = cargar_leontief()
+    agg = cargar_icds_agg()
+    if df.empty:
+        ultimo_mes = "N/D"
+        ultimo = {}
+        icds_agg_actual = 0.0
+    else:
+        ultimo_mes = str(df.dropna(subset=["icds_star"])["fecha"].max()) if "fecha" in df.columns and "icds_star" in df.columns else str(df.iloc[-1].get("fecha", "N/D"))
+        ultimo_df = df[df["fecha"].astype(str) == ultimo_mes] if "fecha" in df.columns else df.tail(len(MACROS_LIST))
+        ultimo = ultimo_df.set_index("macrosector_id").to_dict("index") if "macrosector_id" in ultimo_df.columns else {}
+        icds_agg_actual = float(ultimo_df["icds_star"].mean()) if "icds_star" in ultimo_df.columns else 0.0
+
+    if not agg.empty and "regimen" in agg.columns:
+        regimen_icds = int(agg["regimen"].iloc[-1])
+    else:
+        regimen_icds = 0 if icds_agg_actual >= 0.60 else 2 if icds_agg_actual < 0.40 else 1
+
+    leontief_diag = {}
+    try:
+        leontief_diag = {m: float(L.loc[m, m]) for m in MACROS_LIST}
+    except Exception:
+        leontief_diag = {m: 1.0 for m in MACROS_LIST}
+
+    return {
+        "ultimo_mes": ultimo_mes,
+        "icds_agg_actual": icds_agg_actual,
+        "regimen_icds": regimen_icds,
+        "ultimo": ultimo,
+        "leontief_diag": leontief_diag
+    }
+
+def simular_choque(df_star, A, sec_c, icds_c):
+    if hasattr(md, "simular_choque"):
+        return md.simular_choque(df_star, A, sec_c, icds_c)
+
+    ultimo_mes = df_star["fecha"].max()
+    base = df_star[df_star["fecha"] == ultimo_mes].copy()
+    base = base.set_index("macrosector_id")
+    base.loc[sec_c, "icds_star"] = icds_c
+    res = []
+    for m in MACROS_LIST:
+        icds_base = float(base.loc[m, "icds_star"]) if m in base.index else 0.5
+        influencia = 0.0
+        for j in MACROS_LIST:
+            try:
+                influencia += float(A.loc[j, m]) * max(0, 0.5 - float(base.loc[j, "icds_star"]))
+            except Exception:
+                pass
+        icds_shock = max(0, icds_base - 0.5 * influencia)
+        res.append({
+            "macrosector": MACROS[m],
+            "icds_base": icds_base,
+            "icds_shock": icds_shock,
+            "caida": icds_base - icds_shock
+        })
+    return pd.DataFrame(res)
+
 
 st.set_page_config(
     page_title="MVES-CO · Alerta Temprana",
@@ -51,8 +276,8 @@ ult_mes       = D['ultimo_mes']
 icds_agg_ult  = D['icds_agg_actual']
 reg_ult       = D['regimen_icds']
 ult_sectores  = D['ultimo']
-mk_alerta     = mkp['alerta_actual']
-mk_prob       = mkp['prob_crisis_actual']
+mk_alerta     = mkp.get('alerta_actual', 'VERDE')
+mk_prob       = mkp.get('prob_crisis_actual', 0.0)
 
 with st.sidebar:
     st.markdown("## 🔔 MVES-CO")
@@ -167,7 +392,7 @@ elif pagina == "📈 Sectores ICDS / ICDS*":
         fig2.add_trace(go.Bar(y=labels2,x=v_icds,orientation="h",name="ICDS",
                                marker_color="rgba(55,138,221,.4)",marker_line_color="#378ADD",marker_line_width=1))
         fig2.add_trace(go.Bar(y=labels2,x=v_star,orientation="h",name="ICDS*",
-                               marker_color=[c+"99" for c in colors2],
+                               marker_color=[hex_to_rgba(c, 0.60) for c in colors2],
                                marker_line_color=colors2,marker_line_width=1.5))
         for x in [0.40,0.60]:
             fig2.add_vline(x=x,line_dash="dot",line_color="gray",opacity=0.4)
@@ -295,16 +520,19 @@ elif pagina == "🔄 Markov — Riesgo financiero":
         | Parámetro | Valor |
         |-----------|-------|
         | Regímenes (k) | 2 (Calma / Crisis) |
-        | Observaciones | {mkp['n_obs']} meses |
-        | Período | {mkp['periodo_min']} — {mkp['periodo_max']} |
-        | AIC | {mkp['aic']} |
-        | Log-likelihood | {mkp['llf']} |
+        | Observaciones | {mkp.get('n_obs', 'N/D')} meses |
+        | Período | {mkp.get('periodo_min', 'N/D')} — {mkp.get('periodo_max', 'N/D')} |
+        | AIC | {mkp.get('aic', 'N/D')} |
+        | Log-likelihood | {mkp.get('llf', 'N/D')} |
         | Variable | ICDS* sistémico agregado (ponderado PIB) |
         | Implementación | statsmodels.MarkovAutoregression |
         """)
         st.subheader("Validación")
         cov_ok = mkp['covid_p_crisis'] > 0.60
-        st.success(f"✓ COVID-19 detectado: P(crisis) = {mkp['covid_p_crisis']*100:.1f}% (mar-sep 2020)") if cov_ok else st.warning("⚠ Revisar detección COVID")
+        if cov_ok:
+            st.success(f"✓ COVID-19 detectado: P(crisis) = {mkp.get('covid_p_crisis', 0)*100:.1f}% (mar-sep 2020)")
+        else:
+            st.warning("⚠ Revisar detección COVID")
 
     with col2:
         st.subheader("TRM y tasa de política")
@@ -462,7 +690,7 @@ $$P(s_t = j \\mid s_{{t-1}} = i) = p_{{ij}}$$
 - **Especificación:** switching_ar = True (φ cambia por régimen), switching_variance = False
 - **Estimación:** statsmodels.MarkovAutoregression — búsqueda con 50 semillas aleatorias
 - **Validación:** COVID-19 detectado con P(crisis) = {mkp['covid_p_crisis']*100:.1f}% (mar-sep 2020)
-- **AIC:** {mkp['aic']} | **Log-likelihood:** {mkp['llf']}
+- **AIC:** {mkp.get('aic', 'N/D')} | **Log-likelihood:** {mkp.get('llf', 'N/D')}
 
 ---
 
