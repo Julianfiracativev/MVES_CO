@@ -473,7 +473,7 @@ elif pagina == "🔄 Regímenes Markov":
     c4.metric("Prob. alerta roja t+1", f'{resumen_mk["prob_roja_t1"]:.1f}%')
 
     st.divider()
-    col1= st.columns([1.3])
+    col1, col2 = st.columns([1.3, 0.7])
     with col1:
         st.subheader("Evolución del Score de Riesgo")
         fig = go.Figure()
