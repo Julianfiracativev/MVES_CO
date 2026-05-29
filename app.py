@@ -1,4 +1,3 @@
-
 """
 app.py — Dashboard principal MVES-CO
 Sistema de Alerta Temprana: Riesgo de Contagio Financiero Intersectorial en Colombia
@@ -14,89 +13,13 @@ from plotly.subplots import make_subplots
 import networkx as nx
 import json
 from pathlib import Path
-import mves_data as md
-
-# Importaciones compatibles con diferentes versiones de mves_data.py
-MACROS = md.MACROS
-MACROS_LIST = md.MACROS_LIST
-COLORES_ESTADO = md.COLORES_ESTADO
-NOMBRES_ESTADO = md.NOMBRES_ESTADO
-COLORES_REGIMEN = md.COLORES_REGIMEN
-NOMBRES_REGIMEN = md.NOMBRES_REGIMEN
-PESOS_PIB = getattr(md, "PESOS_PIB", {})
-EXCLUIR_COVID = getattr(md, "EXCLUIR_COVID", [])
-
-cargar_panel = md.cargar_panel
-cargar_leontief = md.cargar_leontief
-calcular_icds_star = md.calcular_icds_star
-calcular_serie_agregada = md.calcular_serie_agregada
-calcular_transicion = md.calcular_transicion
-simular_choque = md.simular_choque
-ejecutar_modelo_leontief_nuevo = getattr(md, "ejecutar_modelo_leontief_nuevo", None)
-
-
-def calcular_resumen_markov():
-    """Usa mves_data.calcular_resumen_markov si existe.
-    Si no existe, carga datos/dataset_final_modelo_markov_switching.csv y calcula un resumen básico.
-    """
-    if hasattr(md, "calcular_resumen_markov"):
-        return md.calcular_resumen_markov()
-
-    csv_path = Path("datos/dataset_final_modelo_markov_switching.csv")
-    if not csv_path.exists():
-        return (
-            pd.DataFrame(columns=["Periodo", "Score_Riesgo", "Riesgo_Label"]),
-            pd.DataFrame(np.eye(3), index=["R0", "R1", "R2"], columns=["R0", "R1", "R2"]),
-            {
-                "observaciones": 0,
-                "ultimo_periodo": pd.NaT,
-                "ultimo_regimen": 0,
-                "prob_roja_t1": 0.0,
-            },
-        )
-
-    df = pd.read_csv(csv_path)
-    if "Periodo" in df.columns:
-        df["Periodo"] = pd.to_datetime(df["Periodo"], errors="coerce")
-    elif "fecha" in df.columns:
-        df["Periodo"] = pd.to_datetime(df["fecha"], errors="coerce")
-    else:
-        df["Periodo"] = pd.date_range("2015-01-01", periods=len(df), freq="MS")
-
-    if "Score_Riesgo" not in df.columns:
-        numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-        df["Score_Riesgo"] = df[numeric_cols[0]] if numeric_cols else 0.0
-
-    if "Riesgo_Label" not in df.columns:
-        q1 = df["Score_Riesgo"].quantile(0.60)
-        q2 = df["Score_Riesgo"].quantile(0.85)
-        df["Riesgo_Label"] = np.select(
-            [df["Score_Riesgo"] >= q2, df["Score_Riesgo"] >= q1],
-            [2, 1],
-            default=0,
-        )
-
-    labels = df["Riesgo_Label"].fillna(0).astype(int).clip(0, 2).to_numpy()
-    P = np.zeros((3, 3), dtype=float)
-    for a, b in zip(labels[:-1], labels[1:]):
-        P[a, b] += 1
-    row_sums = P.sum(axis=1)
-    for i in range(3):
-        if row_sums[i] > 0:
-            P[i, :] = P[i, :] / row_sums[i]
-        else:
-            P[i, i] = 1.0
-
-    P_df = pd.DataFrame(P, index=["R0", "R1", "R2"], columns=["R0", "R1", "R2"])
-    ultimo_regimen = int(labels[-1]) if len(labels) else 0
-    resumen = {
-        "observaciones": int(len(df)),
-        "ultimo_periodo": df["Periodo"].dropna().max() if len(df) else pd.NaT,
-        "ultimo_regimen": ultimo_regimen,
-        "prob_roja_t1": float(P[ultimo_regimen, 2] * 100),
-    }
-    return df, P_df, resumen
-
+import networkx as nx
+from mves_data import (
+    MACROS, MACROS_LIST, COLORES_ESTADO, NOMBRES_ESTADO,
+    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB, EXCLUIR_COVID,
+    cargar_panel, cargar_leontief, calcular_icds_star,
+    calcular_serie_agregada, calcular_transicion, simular_choque, ejecutar_modelo_leontief_nuevo, calcular_resumen_markov,
+)
 
 def hex_to_rgba(hex_color, alpha=1.0):
     """Convierte #RRGGBB a rgba(r,g,b,a) para Plotly."""
@@ -550,45 +473,23 @@ elif pagina == "🔄 Regímenes Markov":
     c4.metric("Prob. alerta roja t+1", f'{resumen_mk["prob_roja_t1"]:.1f}%')
 
     st.divider()
+    col1, col2 = st.columns([1.3, 0.7])
+    with col1:
+        st.subheader("Evolución del Score de Riesgo")
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=df_mk["Periodo"], y=df_mk["Score_Riesgo"], mode="lines", name="Score_Riesgo"))
+        rojas = df_mk[df_mk["Riesgo_Label"] == 2]
+        amarillas = df_mk[df_mk["Riesgo_Label"] == 1]
+        fig.add_trace(go.Scatter(x=rojas["Periodo"], y=rojas["Score_Riesgo"], mode="markers", name="Alerta roja", marker=dict(size=8, color="#E24B4A")))
+        fig.add_trace(go.Scatter(x=amarillas["Periodo"], y=amarillas["Score_Riesgo"], mode="markers", name="Alerta amarilla", marker=dict(size=7, color="#BA7517")))
+        fig.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="Score")
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.subheader("Evolución del Score de Riesgo")
-    fig = go.Figure()
-    fig.add_trace(go.Scatter(
-        x=df_mk["Periodo"],
-        y=df_mk["Score_Riesgo"],
-        mode="lines",
-        name="Score Riesgo",
-        line=dict(width=2, color="#1F77B4")
-    ))
-
-    rojas = df_mk[df_mk["Riesgo_Label"] == 2]
-    amarillas = df_mk[df_mk["Riesgo_Label"] == 1]
-
-    fig.add_trace(go.Scatter(
-        x=rojas["Periodo"],
-        y=rojas["Score_Riesgo"],
-        mode="markers",
-        name="Alerta roja",
-        marker=dict(size=8, color="#E24B4A")
-    ))
-
-    fig.add_trace(go.Scatter(
-        x=amarillas["Periodo"],
-        y=amarillas["Score_Riesgo"],
-        mode="markers",
-        name="Alerta amarilla",
-        marker=dict(size=7, color="#BA7517")
-    ))
-
-    fig.update_layout(
-        height=520,
-        margin=dict(l=10, r=10, t=10, b=10),
-        yaxis_title="Score",
-        xaxis_title="Periodo",
-        legend=dict(orientation="h", y=1.05, x=0)
-    )
-
-    st.plotly_chart(fig, use_container_width=True)
+    with col2:
+        st.subheader("Matriz de transición")
+        fig_h = px.imshow(P_df, text_auto=".2%", aspect="auto", color_continuous_scale="Blues")
+        fig_h.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10))
+        st.plotly_chart(fig_h, use_container_width=True)
 
 
 elif pagina == "🔗 Contagio MIP":
