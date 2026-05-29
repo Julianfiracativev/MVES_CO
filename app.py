@@ -16,9 +16,9 @@ from pathlib import Path
 import networkx as nx
 from mves_data import (
     MACROS, MACROS_LIST, COLORES_ESTADO, NOMBRES_ESTADO,
-    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB,
+    COLORES_REGIMEN, NOMBRES_REGIMEN, PESOS_PIB, EXCLUIR_COVID,
     cargar_panel, cargar_leontief, calcular_icds_star,
-    calcular_serie_agregada, calcular_transicion, simular_choque, calcular_resumen_markov,
+    calcular_serie_agregada, calcular_transicion, simular_choque, ejecutar_modelo_leontief_nuevo, calcular_resumen_markov,
 )
 
 def hex_to_rgba(hex_color, alpha=1.0):
@@ -119,7 +119,7 @@ if pagina == "📊 Resumen ejecutivo":
     # Métricas principales
     icds_agg_ult = round(float(serie_agg["icds_agg"].iloc[-1]), 3)
     s45 = ult[ult["estado_star"].isin(["S4", "S5"])]
-    contagio = ult[ult["ajuste_mip"] > 0.015]
+    contagio = ult[ult["ajuste_mip"] > 0.005]
 
     c1, c2, c3, c4, c5 = st.columns(5)
     c1.metric("ICDS* Sistémico", f"{icds_agg_ult:.3f}")
@@ -142,7 +142,7 @@ if pagina == "📊 Resumen ejecutivo":
             nombre_est = NOMBRES_ESTADO.get(est, est)
             ajuste = row.get("ajuste_mip", 0) or 0
             icds_v = row.get("icds_star", 0) or 0
-            alerta_c = "⚠️" if ajuste > 0.015 else ""
+            alerta_c = "⚠️" if ajuste > 0.005 else ""
             st.markdown(
                 f"""<div style="display:flex;align-items:center;gap:8px;
                 padding:7px 10px;border-bottom:1px solid #e1e8f0;font-size:13px">
@@ -449,12 +449,16 @@ elif pagina == "🔄 Regímenes Markov":
         st.markdown(f"**Nivel de alerta:** {nivel_color[nivel_alerta]} **{nivel_alerta}**")
 
 
+# ═══════════════════════════════════════════════════════════════════════════
+# PÁGINA 5 — CONTAGIO MIP
+# ═══════════════════════════════════════════════════════════════════════════
+
 
     st.divider()
 
-    # ═══════════════════════════════════════════════════════════════════════
+    # ═══════════════════════════════════════════════════════════════════════════
     # BLOQUE INTEGRADO — MODELO DE RIESGO MARKOV SWITCHING
-    # ═══════════════════════════════════════════════════════════════════════
+    # ═══════════════════════════════════════════════════════════════════════════
     st.title("📉 Modelo de Riesgo — Markov Switching")
     st.markdown("Modelo calculado desde `datos/dataset_final_modelo_markov_switching.csv`.")
 
@@ -464,58 +468,30 @@ elif pagina == "🔄 Regímenes Markov":
 
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Observaciones", resumen_mk["observaciones"])
-    c2.metric(
-        "Último periodo",
-        resumen_mk["ultimo_periodo"].strftime("%Y-%m")
-        if pd.notna(resumen_mk["ultimo_periodo"]) else "N/A"
-    )
+    c2.metric("Último periodo", resumen_mk["ultimo_periodo"].strftime("%Y-%m") if pd.notna(resumen_mk["ultimo_periodo"]) else "N/A")
     c3.metric("Régimen actual", nombre_reg)
     c4.metric("Prob. alerta roja t+1", f'{resumen_mk["prob_roja_t1"]:.1f}%')
 
     st.divider()
+    col1, col2 = st.columns([1.3, 0.7])
+    with col1:
+        st.subheader("Evolución del Score de Riesgo")
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=df_mk["Periodo"], y=df_mk["Score_Riesgo"], mode="lines", name="Score_Riesgo"))
+        rojas = df_mk[df_mk["Riesgo_Label"] == 2]
+        amarillas = df_mk[df_mk["Riesgo_Label"] == 1]
+        fig.add_trace(go.Scatter(x=rojas["Periodo"], y=rojas["Score_Riesgo"], mode="markers", name="Alerta roja", marker=dict(size=8, color="#E24B4A")))
+        fig.add_trace(go.Scatter(x=amarillas["Periodo"], y=amarillas["Score_Riesgo"], mode="markers", name="Alerta amarilla", marker=dict(size=7, color="#BA7517")))
+        fig.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10), yaxis_title="Score")
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.subheader("Evolución del Score de Riesgo")
-
-    fig_score = go.Figure()
-    fig_score.add_trace(go.Scatter(
-        x=df_mk["Periodo"],
-        y=df_mk["Score_Riesgo"],
-        mode="lines",
-        name="Score_Riesgo"
-    ))
-
-    rojas = df_mk[df_mk["Riesgo_Label"] == 2]
-    amarillas = df_mk[df_mk["Riesgo_Label"] == 1]
-
-    fig_score.add_trace(go.Scatter(
-        x=rojas["Periodo"],
-        y=rojas["Score_Riesgo"],
-        mode="markers",
-        name="Alerta roja",
-        marker=dict(size=8, color="#E24B4A")
-    ))
-
-    fig_score.add_trace(go.Scatter(
-        x=amarillas["Periodo"],
-        y=amarillas["Score_Riesgo"],
-        mode="markers",
-        name="Alerta amarilla",
-        marker=dict(size=7, color="#BA7517")
-    ))
-
-    fig_score.update_layout(
-        height=520,
-        margin=dict(l=10, r=10, t=10, b=10),
-        yaxis_title="Score",
-        legend=dict(orientation="h", y=1.05)
-    )
-
-    st.plotly_chart(fig_score, use_container_width=True)
+    with col2:
+        st.subheader("Matriz de transición")
+        fig_h = px.imshow(P_df, text_auto=".2%", aspect="auto", color_continuous_scale="Blues")
+        fig_h.update_layout(height=420, margin=dict(l=10, r=10, t=10, b=10))
+        st.plotly_chart(fig_h, use_container_width=True)
 
 
-# ═══════════════════════════════════════════════════════════════════════════
-# PÁGINA 5 — CONTAGIO MIP
-# ═══════════════════════════════════════════════════════════════════════════
 elif pagina == "🔗 Contagio MIP":
     st.title("Contagio Intersectorial — Matriz Insumo-Producto")
     st.markdown("Vista organizada del modelo Leontief, dependencias productivas y contagio sectorial.")
@@ -1204,19 +1180,20 @@ elif pagina == "📖 Metodología":
         | DANE — IPP Producción Nacional | ΔCostos productivos | Mensual |
         | BanRep — IPC Nacional | Inflación general | Mensual |
         | BanRep — TPM | Tasa política monetaria | Mensual |
-        | DANE — MIP 2019 y 2021 | Coeficientes técnicos | Anual |
+        | DANE — MIP 2021 | Coeficientes técnicos de Leontief | Anual |
         """)
     with col2:
         st.subheader("Limitaciones metodológicas")
         st.markdown("""
-        - **MIP estática:** Los coeficientes técnicos (2019, 2021) pueden no reflejar
-          cambios estructurales post-COVID en las cadenas productivas.
+        - **MIP estática:** Los coeficientes técnicos (DANE 2021) no reflejan
+          cambios estructurales posteriores. Próxima actualización pendiente del DANE.
         - **Normalización PIT:** Sensible al período de referencia elegido.
           Se recomienda ventana móvil en actualizaciones futuras.
         - **Agregación sectorial:** La agrupación de 68 productos CPC en 12 macrosectores
           pierde heterogeneidad interna.
-        - **Pesos del ICDS:** Calibrados por juicio experto. Calibración mediante
-          AHP o regresión es recomendada como trabajo futuro.
-        - **Markov por umbrales:** La versión actual usa clasificación determinística.
-          La estimación por MLE (statsmodels) es preferible con >100 observaciones.
+        - **Pesos del ICDS:** Derivados de Análisis de Componentes Principales (ACP)
+          sobre el panel histórico 2015-2026. PC1 explica el 34.6% de la varianza total.
+        - **Markov AR(1):** Estimado con statsmodels.MarkovAutoregression
+          (switching_ar=True, k=2, n=136 obs). AIC=-513.07 | LLF=263.54.
         """)
+
