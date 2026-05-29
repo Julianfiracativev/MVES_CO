@@ -1,3 +1,4 @@
+
 """
 app.py — Dashboard principal MVES-CO
 Sistema de Alerta Temprana: Riesgo de Contagio Financiero Intersectorial en Colombia
